@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  body {
+    font-family: 'Lato', sans-serif;
+    display: flex;
+  
+    @include small {
+      overflow-y: scroll;
+      height: auto;
+    }
+  }

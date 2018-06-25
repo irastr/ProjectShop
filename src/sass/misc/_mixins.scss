@@ -1,0 +1,49 @@
+@mixin container {
+    width: 1140px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+@mixin extra-large {
+    @media screen and (max-width: $extra-large) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media screen and (max-width: $large) {
+        @content;
+    }
+}
+
+@mixin medium {
+    @media screen and (max-width: $medium) {
+        @content;
+    }
+}
+
+@mixin small {
+    @media screen and (max-width: $small) {
+        @content;
+    }
+}
+
+@mixin extra-small {
+    @media screen and (max-width: $extra-small) {
+        @content;
+    }
+}
+
+
+@mixin rem($size) {
+    font-size: $size / $basic-font-size + rem;
+  }
+  
+  @mixin font($weight) {
+    @if $weight == bold {
+      font-family: 'PT Sans Bold';
+    }
+    @if $weight == reg {
+      font-family: 'PT Sans Regular';
+    }
+  }

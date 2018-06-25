@@ -1,0 +1,22 @@
+@import '../libs/normalize';  
+
+@import '../libs/fontawesome-all';
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900');
+
+
+@import 'misc/env';
+@import 'misc/mixins';
+@import 'misc/adjustments';
+
+/**
+*   Split duties and import done styles for components
+**/
+
+/**
+* Layout styles
+**/
+
+@import '../layout/footer/footer';
+@import '../layout/header/header';
+@import '../layout/upper-header/upper-header';
