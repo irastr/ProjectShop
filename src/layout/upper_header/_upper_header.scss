@@ -6,6 +6,10 @@
   z-index: 99;
 }
 
+.fas{
+  color: $orange;
+}
+
 .topbar {
   background: #ffffff;
   height: 60px;
@@ -15,6 +19,7 @@
 .container--topbar {
   display: flex;
   justify-content: space-between;
+  @include container;
 }
 
 .social__list {
@@ -39,6 +44,7 @@
   color: $orange;
 }
 
+
 .contacts__list {
   display: flex;
   margin: 0;
@@ -51,14 +57,14 @@
 }
 
 .contacts__link {
-  color: #fff;
+  color: $deepblue;
   text-decoration: none;
   font-style: normal;
   font-size: 13px;
 }
 
 .contacts__link:hover {
-  color: #5db442;
+  color: $orange;
 }
 
 .contacts__icon,
