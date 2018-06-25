@@ -1,19 +1,21 @@
-.header {
+.topbar {
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   z-index: 99;
 }
+
 .topbar {
   background: #ffffff;
+  height: 60px;
   padding: 11px 0;
 }
+
 .container--topbar {
   display: flex;
   justify-content: space-between;
 }
-
 
 .social__list {
   margin: 0;
@@ -27,7 +29,7 @@
 }
 
 .social__link {
-  color:$deepblue;
+  color: $deepblue;
   font-size: 12px;
   transition: color .1s ease-in-out;
   font-style: normal;
