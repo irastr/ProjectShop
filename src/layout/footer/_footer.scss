@@ -1,0 +1,92 @@
+.footer {
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    // height: 244px;
+}
+
+.container--footer {
+    display: flex;
+    justify-content: space-between;
+    @include container;
+    margin-bottom: 80px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo__link {
+    margin: 0;
+    padding: 0;
+}
+
+.logo-img {
+    width: 117px;
+    height: 38px;
+}
+
+.copyright {
+    margin: 0;
+    padding: 0;
+}
+
+.copyright__title {
+    color: $graphite;
+    @include rem(14);
+    font-weight: 400;
+    line-height: 30px;
+    text-align: right;
+}
+
+.payment{
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-method {
+    color: $orange;
+    @include rem(16);
+    line-height: 30px;
+    text-align: right;
+}
+
+.payment-method-img {
+    width: 170px;
+    height: 19px;
+}
+
+.nav__footer {
+    display: flex;
+    // justify-content: space-between;
+    width: 500px;
+    height: 76px;
+    flex-wrap: wrap;
+}
+
+.nav__footer--list {
+    // list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__footer--item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__footer--link {
+    text-decoration: none;
+    color: $graphite;
+    @include rem(14);
+    font-weight: 400;
+    text-align-last: right;
+    line-height: 30px;
+
+    &:hover {
+        color: $orange;
+    }
+}

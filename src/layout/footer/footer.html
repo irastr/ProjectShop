@@ -1,0 +1,42 @@
+{%
+    set navItems = [
+      { title: 'about us', path: 'index.html' },
+      { title: 'contat us', path: 'index.html' },
+      { title: 'support', path: 'form.html' },
+      { title: 'our feed', path: 'form.html' },
+      { title: 'terms and conditions', path: 'form.html' },
+      { title: 'our privacy', path: 'form.html' },
+      { title: 'join us', path: 'form.html' },
+      { title: 'live support', path: 'form.html' }
+    ]  
+  %}
+
+
+<footer class="footer">
+    <div class="container container--footer">
+        <div class="logo">
+            <a href="#" class="logo__link">
+                <img src="img/logo.png" alt="logo image" class="logo-img">
+            </a>
+            <div class="copyright">
+                <span class="copyright__title">shopy c 2015. your copy right here</span>
+            </div>
+        </div>
+
+        <nav class="nav__footer">
+            <ul class="nav__footer--list">
+                {% for item in navItems %}
+                    <li class="nav__footer--item">
+                        <a href="{{ item.path }}" class="nav__footer--link">{{ item.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+
+        <div class="payment">
+            <span class="payment-method">Payment methods</span>
+            <img src="img/payment methods.png" alt="payment methods" class="payment-method-img">
+        </div>
+    </div>
+
+<footer>
