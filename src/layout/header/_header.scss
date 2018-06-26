@@ -1,0 +1,12 @@
+.navbar-adjustments{
+    margin-top: 100px;
+}
+
+.nav-link{
+    color: $deepblue;
+
+    &:hover{
+        color: $orange;
+    }
+}
+

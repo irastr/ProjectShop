@@ -12,13 +12,13 @@
 
 .topbar {
   background: #ffffff;
-  height: 60px;
-  padding: 11px 0;
+  border-bottom: 1px solid #edeff1;
 }
 
 .container--topbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   @include container;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .social__item:not(:first-child) {
-  margin-left: 21px;
+  margin-left: 15px;
 }
 
 .social__link {
@@ -38,10 +38,12 @@
   font-size: 12px;
   transition: color .1s ease-in-out;
   font-style: normal;
+
 }
 
 .social__link:hover {
   color: $orange;
+  text-decoration: none;
 }
 
 
