@@ -18,8 +18,9 @@
 .container--topbar {
   display: flex;
   justify-content: space-between;
-  margin-top: 25px;
-  @include container;
+  align-items: center;
+  margin-top: 10px;
+ @include container;
 }
 
 .social__list {
