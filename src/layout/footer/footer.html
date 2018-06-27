@@ -19,7 +19,7 @@
                 <img src="img/logo.png" alt="logo image" class="logo-img">
             </a>
             <div class="copyright">
-                <span class="copyright__title">shopy c 2015. your copy right here</span>
+                <span class="copyright__title footer__style">shopy c 2015. your copy right here</span>
             </div>
         </div>
 
@@ -27,7 +27,8 @@
             <ul class="nav__footer--list">
                 {% for item in navItems %}
                     <li class="nav__footer--item">
-                        <a href="{{ item.path }}" class="nav__footer--link">{{ item.title }}</a>
+                        <i class="fas fa-circle"></i>
+                        <a href="{{ item.path }}" class="nav__footer--link footer__style">{{ item.title }}</a>
                     </li>
                 {% endfor %}
             </ul>
@@ -35,7 +36,7 @@
 
         <div class="payment">
             <span class="payment-method">Payment methods</span>
-            <img src="img/payment methods.png" alt="payment methods" class="payment-method-img">
+            <img src="img/payment images.png" alt="payment methods" class="payment-method-img">
         </div>
     </div>
 
