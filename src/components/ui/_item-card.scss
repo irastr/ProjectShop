@@ -1,0 +1,45 @@
+.item-card__list {
+    @include container;
+    display: flex;
+    list-style: none;
+    margin: 0 auto;
+    padding: 80px 0 0 0;
+    justify-content: space-between;
+
+}
+
+.item-card-wrap {
+    width: 270px;
+    height: 365px;
+    background-color: #fff;
+}
+
+.item-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.item-card__img {
+    display: block;
+    max-height: 215px;
+}
+
+.item-card__title {
+    @include rem(18);
+    color: $deepblue;
+    font-weight: 700;
+    margin: 0;
+    padding-top: 29px;
+}
+
+.item-card__price {
+    @include rem(18);
+    color: $orange;
+    font-weight: 700;
+    margin: 0;
+    padding-top: 33px;
+}
