@@ -25,7 +25,7 @@
 
 .item-card__img {
     display: block;
-    max-height: 215px;
+    height: 80px;
 }
 
 .item-card__title {
@@ -42,4 +42,16 @@
     font-weight: 700;
     margin: 0;
     padding-top: 33px;
+}
+
+.item-card__color-btn--wrap {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.item-card__color-btn {
+    width: 14px;
+    height: 14px;
+    color: red;
 }
