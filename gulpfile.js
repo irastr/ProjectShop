@@ -74,8 +74,7 @@ gulp.task('transform', function() {
 })
 
 gulp.task('js', ['transform'], function() {
-    // Assumes a file has been transformed from
-    // ./app/src/main.jsx to ./app/dist/main.js
+    
     return browserify('dist/js/main.js')
         .bundle()
         .on('error', gutil.log)
