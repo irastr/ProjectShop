@@ -1,7 +1,6 @@
 @mixin container {
     width: 1140px;
-
-   
+    margin: 0 auto;   
 }
 
 @mixin extra-large {
