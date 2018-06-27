@@ -1,3 +1,27 @@
-<div class="kek">
-    <ul class="lol"></ul>
-</div>
+{%
+
+    set list = [
+        {img: 'img/red-coat.png', title: 'Reebok Track Jacket', price: '100$'},
+        {img: 'img/red-coat.png', title: 'Reebok Track Jacket', price: '100$'},
+        {img: 'img/red-coat.png', title: 'Reebok Track Jacket', price: '100$'}
+    ]
+
+%}
+
+<ul class="item-card__list">
+
+    {% for item in list %}
+    <li class="item-card-wrap">
+        <figure class="item-card">
+            <img src="{{ item.img }}" alt="" class="item-card__img">
+            <h4 class="item-card__title">
+                {{ item.title }}
+            </h4>
+            <span class="item-card__price">
+                {{ item.price }}
+            </span>
+        </figure>
+    </li>
+    {% endfor %}
+
+</ul>

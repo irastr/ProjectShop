@@ -6,8 +6,12 @@ const gulp          = require('gulp'),
       maps          = require('gulp-sourcemaps'),
       browserSync   = require('browser-sync'),
       nunjucks      = require('gulp-nunjucks-render'),
-      imagemin      = require('gulp-imagemin')
-      ;
+      imagemin      = require('gulp-imagemin'),
+      source        = require('vinyl-source-stream'),
+      buffer        = require('vinyl-buffer'),
+      gutil         = require('gulp-util'),
+      browserify    = require('browserify'),
+      babel         = require('gulp-babel');
 
 
 gulp.task('css', ()=>{
@@ -61,12 +65,32 @@ gulp.task('reload', ()=>{
     })
 });
 
+gulp.task('transform', function() {
+    return gulp.src('src/**/*.jsx')
+        .pipe(babel({
+            presets: ["react", "es2015"]
+        }))
+        .pipe(gulp.dest('dist'));
+})
+
+gulp.task('js', ['transform'], function() {
+    
+    return browserify('dist/js/main.js')
+        .bundle()
+        .on('error', gutil.log)
+        .pipe(source('main.js'))
+        .pipe(buffer())
+        .pipe(gulp.dest('dist/js'))
+});
 
 
 
-gulp.task('watch',['reload', 'css', 'html'], ()=>{
+
+
+gulp.task('watch',['reload', 'css', 'html','js'], ()=>{
     gulp.watch('src/**/*.scss', ['css']);
     gulp.watch('src/**/*.html', ['html']);
+    gulp.watch('src/**/*.js',['js']);
     gulp.watch('dist/*.html', browserSync.reload());
 });
 
