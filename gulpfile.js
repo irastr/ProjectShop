@@ -70,7 +70,7 @@ gulp.task('transform', function() {
         .pipe(babel({
             presets: ["react", "es2015"]
         }))
-        .pipe(gulp.dest('dist/js'));
+        .pipe(gulp.dest('dist'));
 })
 
 gulp.task('js', ['transform'], function() {
@@ -80,7 +80,7 @@ gulp.task('js', ['transform'], function() {
         .on('error', gutil.log)
         .pipe(source('main.js'))
         .pipe(buffer())
-        .pipe(gulp.dest('./'))
+        .pipe(gulp.dest('dist/js'))
 });
 
 
@@ -90,7 +90,7 @@ gulp.task('js', ['transform'], function() {
 gulp.task('watch',['reload', 'css', 'html','js'], ()=>{
     gulp.watch('src/**/*.scss', ['css']);
     gulp.watch('src/**/*.html', ['html']);
-    gulp.watch('src/**/*.js',[js]);
+    gulp.watch('src/**/*.js',['js']);
     gulp.watch('dist/*.html', browserSync.reload());
 });
 
