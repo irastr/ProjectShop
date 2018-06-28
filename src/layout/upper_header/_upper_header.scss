@@ -1,5 +1,5 @@
 .topbar {
-  position: fixed;
+  position: relative;
   left: 0;
   top: 0;
   width: 100%;
@@ -19,7 +19,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @include container;
+  margin-top: 10px;
+ @include container;
 }
 
 .social__list {
@@ -67,6 +68,7 @@
 
 .contacts__link:hover {
   color: $orange;
+  text-decoration: none;
 }
 
 .contacts__icon,

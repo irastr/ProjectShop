@@ -10,7 +10,6 @@
   
   body {
     font-family: 'Source Sans Pro', sans-serif;
-    display: flex;
   
     @include small {
       overflow-y: scroll;

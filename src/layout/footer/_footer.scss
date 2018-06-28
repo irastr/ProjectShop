@@ -1,0 +1,101 @@
+.footer {
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.container--footer {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 80px 75px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo__link {
+    margin: 0;
+    padding: 0;
+}
+
+.logo-img {
+}
+
+.copyright {
+    margin: 0;
+    padding: 0;
+}
+
+.copyright__title {
+
+}
+
+.footer__style {
+    color: $graphite;
+    @include rem(14);
+    font-weight: 400;
+    line-height: 30px;
+    text-align: right;
+}
+
+.payment{
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-method {
+    display: flex;
+    margin: 0;
+    color: $orange;
+    @include rem(16);
+    line-height: 30px;
+    text-align: right;
+}
+
+.payment-method-img {
+    width: 170px;
+    height: 15px;
+    margin-top: 20px;
+
+}
+
+.nav__footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 76px;
+}
+
+.nav__footer--list {
+     padding: 0 0 10px 0;
+         
+     &:not(:first-child) {
+        margin-left: 65px;
+    }
+}
+
+.nav__footer--item {
+    display: flex;
+
+}
+
+.fas {
+    color: #34404b;
+    width: 4px;
+    height: 4px;
+}
+
+.nav__footer--link {
+  
+    &:hover {
+        color: $orange;
+        text-decoration: none;
+    }
+
+}
