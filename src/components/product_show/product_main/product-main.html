@@ -1,0 +1,73 @@
+{%
+    set orderItems = [
+      { icon: "fa-heart" , path: '#' },
+      { icon: "fa-globe", path: '#' },
+      { icon: "fa-cart-plus", path: '#' }
+    ]  
+  %}
+
+
+<section class="product-show">
+    <div class="product-show__slider-wrap">
+
+
+
+
+    </div>
+
+    <div class="product-show__info-wrap">
+
+        <div class="product-show__descr-wrap">
+
+            <h1 class="product-show__title">
+                full winter kit
+            </h1>
+
+            <h3 class="product-show__title-second">
+                Half Jacket + Skiny Trousers + Boot Leather
+            </h3>
+
+            <p class="product-show__descr">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt inventore quas, doloribus pariatur aut repudiandae, unde animi saepe velit sit ipsam, non quam ipsa rem.
+            </p>
+
+        </div>
+
+
+        <div class="product-show__choose-wrap">
+            <div class="product-show__size-wrap">
+
+            </div>
+
+            <div class="product-show__quantity-wrap">
+
+            </div>
+
+
+        </div>
+
+        <div class="product-show__order-wrap">
+
+            <span class="product-show__price">    </span>
+
+            <div class="product-show__order">
+
+                <ul class="order__list">
+                    {% for item in orderItems %}
+                        <li class="order__link">
+                            <a href=" {{ item.path }} " class="order__link">{{ item.icon }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+
+
+    
+                <button class="order-btn">
+                    <span class="order-btn__title"></span>
+                </button>
+            
+            </div>
+        </div>
+
+    </div>
+</section>
