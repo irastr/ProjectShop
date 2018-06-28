@@ -15,3 +15,21 @@
     line-height: 30px;
 }
 
+.title-main {
+    color: $orange;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.sub-title {
+    color: $supergray;
+    @include rem(17.96);
+    line-height: 30px;
+
+}
+
+.product-show__descr {
+    color: $darkgrey;
+    @include rem(15.99);
+    
+}

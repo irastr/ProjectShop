@@ -1,73 +1,102 @@
 {%
     set orderItems = [
-      { icon: "fa-heart" , path: '#' },
-      { icon: "fa-globe", path: '#' },
-      { icon: "fa-cart-plus", path: '#' }
+        { icon: "far fa-heart" , path: '#' },
+        { icon: "fa-globe", path: '#' },
+        { icon: "fa-cart-plus", path: '#' }
     ]  
   %}
 
+  {%
+    set sliderItems = [
+        { path: '#', src: 'img/Shoes.png' },
+        { path: '#', src: 'img/Trousers.png' },
+        { path: '#', src: 'img/Trousers.png' }
+    ]
 
+%}
 <section class="product-show">
-    <div class="product-show__slider-wrap">
+    <div class="container--product-show">
+        <div class="product-show__slider-wrap">
 
-
-
-
-    </div>
-
-    <div class="product-show__info-wrap">
-
-        <div class="product-show__descr-wrap">
-
-            <h1 class="product-show__title">
-                full winter kit
-            </h1>
-
-            <h3 class="product-show__title-second">
-                Half Jacket + Skiny Trousers + Boot Leather
-            </h3>
-
-            <p class="product-show__descr">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt inventore quas, doloribus pariatur aut repudiandae, unde animi saepe velit sit ipsam, non quam ipsa rem.
-            </p>
-
-        </div>
-
-
-        <div class="product-show__choose-wrap">
-            <div class="product-show__size-wrap">
+            <div class="product-show__img-wrap">
+                    <img src="img/green-coat.png" alt="">
 
             </div>
-
-            <div class="product-show__quantity-wrap">
-
-            </div>
-
-
-        </div>
-
-        <div class="product-show__order-wrap">
-
-            <span class="product-show__price">    </span>
-
-            <div class="product-show__order">
-
-                <ul class="order__list">
-                    {% for item in orderItems %}
-                        <li class="order__link">
-                            <a href=" {{ item.path }} " class="order__link">{{ item.icon }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
-
-
-    
-                <button class="order-btn">
-                    <span class="order-btn__title"></span>
-                </button>
             
-            </div>
+
+            
+
+            <ul class="slider__list">
+                {% for item in sliderItems %}
+                <li class="slider__item">
+                    <a href="{{ item.path }}" class="slider__link">
+                        <img src="{{ item.src }}" alt="" class="slider__img">
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+
+           
+
+
+
+
         </div>
 
+        <div class="product-show__info-wrap">
+
+            <div class="product-show__descr-wrap">
+
+                <h1 class="product-show__title title-main">
+                    full winter kit
+                </h1>
+
+                <h4 class="product-show__sub-title sub-title">
+                    Half Jacket + Skiny Trousers + Boot Leather
+                </h4>
+
+                <p class="product-show__descr">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt inventore quas, doloribus pariatur aut repudiandae, unde animi saepe velit sit ipsam, non quam ipsa rem.
+                </p>
+
+            </div>
+
+
+            <div class="product-show__choose-wrap">
+                <div class="product-show__size-wrap">
+                    Choose size
+                </div>
+
+                <div class="product-show__quantity-wrap">
+                    Choose quantity
+                </div>
+
+
+            </div>
+
+            <div class="product-show__order-wrap">
+
+                <span class="product-show__price"> Price: 120$  </span>
+
+                <div class="product-show__order">
+
+                    <ul class="order__list">
+                        {% for item in orderItems %}
+                            <li class="order__item">
+                                <a href=" {{ item.path }} " class="order__link">{{ item.icon }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+
+
+        
+                    <button class="order-btn">
+                        <span class="order-btn__title">Order Now</span>
+                    </button>
+                
+                </div>
+            </div>
+
+        </div>
     </div>
 </section>
