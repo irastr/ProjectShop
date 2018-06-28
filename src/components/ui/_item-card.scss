@@ -3,12 +3,13 @@
     display: flex;
     list-style: none;
     margin: 0 auto;
-    padding: 80px 0 0 0;
+    // padding: 80px 0 0 0;
     justify-content: space-between;
 
 }
 
 .item-card-wrap {
+    @include card-container;
     width: 270px;
     height: 365px;
     background-color: #fff;
@@ -42,6 +43,7 @@
     font-weight: 700;
     margin: 0;
     padding-top: 33px;
+    display: none;
 }
 
 .item-card__color-btn--wrap {
@@ -50,8 +52,34 @@
     padding: 0;
 }
 
+
 .item-card__color-btn {
+    @include ui-reset-btn;
     width: 14px;
     height: 14px;
-    color: red;
+    background: $darkgrey;
+    border-radius: 50%;
+}
+
+.item-card__color-btn--red {
+    background: #e12e3f;
+}
+
+.item-card__color-btn--deepblue {
+    background: $deepblue;
+}
+
+.item-card__color-btn--blue {
+    background: #3ab3ff;
+}
+
+.item-card__color-btn--green {
+    background: #2fd967;
+}
+
+.item-card__border {
+    display: block;
+    height: 1px;
+    background: #f2f4f7;
+    width: 170px;
 }

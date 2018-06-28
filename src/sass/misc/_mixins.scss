@@ -4,6 +4,19 @@
    
 }
 
+@mixin card-container {
+    width: 170px;
+    height: 305px;
+}
+
+@mixin ui-reset-btn {
+    background: none;
+    padding: 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
 @mixin extra-large {
     @media screen and (max-width: $extra-large) {
         @content;

@@ -9,6 +9,17 @@
 
 %}
 
+{%
+
+    set buttons = [
+        {color: 'item-card__color-btn--red'},
+        {color: 'item-card__color-btn--deepblue'},
+        {color: 'item-card__color-btn--blue'},
+        {color: 'item-card__color-btn--green'}
+    ]
+
+%}
+
 <ul class="item-card__list">
 
     {% for item in list %}
@@ -21,20 +32,19 @@
             <span class="item-card__size">
                 {{ item.size }}
             </span>
-                <ul class="item-card__color-btn--wrap">
-                    <li class="item-card__color--item">
-                        <button class="item-card__color-btn item-card__color-btn--red"></button>
-                    </li>
-                    <li class="item-card__color-btn--item">
-                        <button class="item-card__color-btn item-card__color-btn--deepblue"></button>
-                    </li>
-                    <li class="item-card__color-btn--item">
-                        <button class="item-card__color-btn item-card__color-btn--blue"></button>
-                    </li>
-                    <li class="item-card__color-btn--item">
-                        <button class="item-card__color-btn item-card__color-btn--green"></button>
-                    </li>
-                </ul>
+
+            <ul class="item-card__color-btn--wrap">
+            
+                {% for btn in buttons %}
+                <li class="item-card__color--item">
+                    <button class="item-card__color-btn {{ btn.color }}"></button>
+                </li>
+                {% endfor %}
+
+            </ul>
+
+            <span class="item-card__border"></span>
+
             <span class="item-card__price">
                 {{ item.price }}
             </span>
