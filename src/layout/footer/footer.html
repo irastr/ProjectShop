@@ -1,15 +1,25 @@
 {%
     set navItems = [
-      { title: 'about us', path: 'index.html' },
-      { title: 'contat us', path: 'index.html' },
-      { title: 'support', path: 'form.html' },
-      { title: 'our feed', path: 'form.html' },
-      { title: 'terms and conditions', path: 'form.html' },
-      { title: 'our privacy', path: 'form.html' },
-      { title: 'join us', path: 'form.html' },
-      { title: 'live support', path: 'form.html' }
+        { title: 'about us', path: 'index.html' },
+        { title: 'contat us', path: 'index.html' },
+        { title: 'support', path: 'form.html' }
     ]  
   %}
+
+{%
+    set navItemsMiddle = [
+        { title: 'our feed', path: 'form.html' },
+        { title: 'terms and conditions', path: 'form.html' },
+        { title: 'our privacy', path: 'form.html' }
+    ]
+%}     
+
+{% 
+    set navItemsLast = [
+        { title: 'join us', path: 'form.html' },
+        { title: 'live support', path: 'form.html' }
+    ]
+%}
 
 
 <footer class="footer">
@@ -23,15 +33,36 @@
             </div>
         </div>
 
-        <nav class="nav__footer">
+        <nav class="nav__footer">  {# сделать 3 ul в 3 колонки #} 
+            
             <ul class="nav__footer--list">
                 {% for item in navItems %}
                     <li class="nav__footer--item">
-                        <i class="fas fa-circle"></i>
+                        {# <i class="fas fa-circle"></i> #}
                         <a href="{{ item.path }}" class="nav__footer--link footer__style">{{ item.title }}</a>
                     </li>
                 {% endfor %}
             </ul>
+           
+            <ul class="nav__footer--list">
+                {% for item in navItemsMiddle %}
+                    <li class="nav__footer--item">
+                        {# <i class="fas fa-circle"></i> #}
+                        <a href="{{ item.path }}" class="nav__footer--link footer__style">{{ item.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            
+            
+            <ul class="nav__footer--list">
+                {% for item in navItemsLast %}
+                    <li class="nav__footer--item">
+                        {# <i class="fas fa-circle"></i> #}
+                        <a href="{{ item.path }}" class="nav__footer--link footer__style">{{ item.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+
         </nav>
 
         <div class="payment">
