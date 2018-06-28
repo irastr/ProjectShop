@@ -1,3 +1,45 @@
-<div class="kek">
-    <ul class="lol"></ul>
-</div>
+{%
+
+    set list = [
+        {img: 'img/red-coat.png', title: 'Reebok Track Jacket', price: '100$', size: 'sizes : s-m-l-xl'},
+        {img: 'img/grey-jacket.png', title: 'Reebok Track Jacket', price: '100$', size: 'sizes : s-m-l-xl'},
+        {img: 'img/red-jacket.png', title: 'Reebok Track Jacket', price: '100$', size: 'sizes : s-m-l-xl'},
+        {img: 'img/red-jacket.png', title: 'Reebok Track Jacket', price: '100$', size: 'sizes : s-m-l-xl'}
+    ]
+
+%}
+
+<ul class="item-card__list">
+
+    {% for item in list %}
+    <li class="item-card-wrap">
+        <figure class="item-card">
+            <img src="{{ item.img }}" alt="" class="item-card__img">
+            <h4 class="item-card__title">
+                {{ item.title }}
+            </h4>
+            <span class="item-card__size">
+                {{ item.size }}
+            </span>
+                <ul class="item-card__color-btn--wrap">
+                    <li class="item-card__color--item">
+                        <button class="item-card__color-btn item-card__color-btn--red"></button>
+                    </li>
+                    <li class="item-card__color-btn--item">
+                        <button class="item-card__color-btn item-card__color-btn--deepblue"></button>
+                    </li>
+                    <li class="item-card__color-btn--item">
+                        <button class="item-card__color-btn item-card__color-btn--blue"></button>
+                    </li>
+                    <li class="item-card__color-btn--item">
+                        <button class="item-card__color-btn item-card__color-btn--green"></button>
+                    </li>
+                </ul>
+            <span class="item-card__price">
+                {{ item.price }}
+            </span>
+        </figure>
+    </li>
+    {% endfor %}
+
+</ul>
