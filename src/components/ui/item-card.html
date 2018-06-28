@@ -20,6 +20,16 @@
 
 %}
 
+{%
+
+    set icons = [
+        {icon: 'fa-globe'},
+        {icon: 'fa-cart-arrow-down'},
+        {icon: 'fa-heart'}
+    ]
+
+%}
+
 <ul class="item-card__list">
 
     {% for item in list %}
@@ -44,6 +54,16 @@
             </ul>
 
             <span class="item-card__border"></span>
+
+            <ul class="item-card__icons-wrap">
+
+                {% for icons in icons %}
+                <li class="item-card__icons--item">
+                    <a href="#" class="item-card__icons--link"> <i class="fas {{ icons.icon }}"></i> </a>
+                </li>
+                {% endfor %}
+
+            </ul>
 
             <span class="item-card__price">
                 {{ item.price }}

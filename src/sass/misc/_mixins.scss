@@ -1,12 +1,6 @@
 @mixin container {
     width: 1140px;
-
-   
-}
-
-@mixin card-container {
-    width: 170px;
-    height: 305px;
+    margin: 0 auto;   
 }
 
 @mixin ui-reset-btn {
@@ -15,6 +9,12 @@
     border: none;
     outline: none;
     cursor: pointer;
+}
+
+@mixin reset-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 @mixin extra-large {
