@@ -39,17 +39,6 @@
     }
 }
 
-.item-card__link {
-    text-decoration: none;
-    display: block;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-}
-
-
 .item-card {
     display: flex;
     flex-direction: column;
@@ -90,10 +79,6 @@
     text-align: center;
     line-height: 1;
 
-    // &:hover {
-    //     color: $orange;
-    // }
-
     @include medium {
         @include rem(16);
     }
@@ -107,8 +92,6 @@
     letter-spacing: 2px;
     margin-bottom: 30px;
     line-height: 1;
-
-    display: none;
 }
 
 .item-card__price {
@@ -119,8 +102,7 @@
     position: absolute;
     bottom: 29px;
 
-
-    // display: none;
+    display: none;
 }
 
 .item-card__color-btn--wrap {
@@ -130,8 +112,6 @@
     justify-content: center;
     margin-bottom: 30px;
     line-height: 1;
-
-    display: none;
 }
 
 .item-card__color--item {
@@ -171,9 +151,6 @@
     background: #f2f4f7;
     width: 170px;
     margin-bottom: 30px;
-
-
-    display: none;
 }
 
 .item-card__icons-wrap {
@@ -184,17 +161,7 @@
     width: 100%;
     line-height: 1;
 
-
-    display: none;
 }
-
-// .item-card__icons--item {
-    // display: block;
-
-//     &:not(:first-child) {
-//         // margin-left: 20px;
-//     }
-// }
 
 .item-card__icons--link {
     display: block;
@@ -207,16 +174,30 @@
     position: absolute;
     width: inherit;
     height: inherit;
+    // display: none;
+    bottom: 29px;
 }
 
-.item-card__link:hover .item-card__new-features--wrap {
-    display: block;
-}
 
-.item-card__link:hover .item-card__price {
-    display: none;
+.item-card__icons--item {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+// .item-card-wrap:hover .item-card__new-features--wrap {
+//     display: block;
+// }
 
-.item-card__link:hover .item-card__title {
-    color: $orange;
-}
+// .item-card-wrap:hover .item-card__price {
+//     display: none;
+// }
+
+// .item-card-wrap:hover .item-card__title {
+//     color: $orange;
+// }
+
+// .item-card-wrap:hover .item-card__img {
+//     max-height: 87px;
+// }
