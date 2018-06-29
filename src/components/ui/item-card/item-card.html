@@ -23,9 +23,9 @@
 {%
 
     set icons = [
-        {icon: 'fa-globe'},
-        {icon: 'fa-cart-arrow-down'},
-        {icon: 'fa-heart'}
+        {icon: 'fas fa-globe'},
+        {icon: 'fas fa-cart-arrow-down'},
+        {icon: 'far fa-heart'}
     ]
 
 %}
@@ -36,7 +36,6 @@
     <!-- item card -->
     {% for item in list %}
     <li class="item-card-wrap">
-        <a href="" class="item-card__link"></a>
             <figure class="item-card">
     
                 <div class="item-card-img-container">
@@ -72,7 +71,7 @@
                         
                             {% for icons in icons %}
                             <li class="item-card__icons--item">
-                                <a href="#" class="item-card__icons--link"> <i class="fas {{ icons.icon }}"></i> </a>
+                                <a href="#" class="item-card__icons--link"> <i class="{{ icons.icon }}"></i> </a>
                             </li>
                             {% endfor %}
                         
@@ -86,7 +85,6 @@
                 </div>
     
             </figure>
-        </a>
     </li> <!-- ./item card -->
     {% endfor %}
 
