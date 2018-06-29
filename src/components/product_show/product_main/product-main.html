@@ -6,11 +6,21 @@
     ]  
   %}
 
-  {%
+{%
     set sliderItems = [
         { path: '#', src: 'img/Shoes.png' },
         { path: '#', src: 'img/Trousers.png' },
         { path: '#', src: 'img/Trousers.png' }
+    ]
+
+%}
+
+{%
+    set sizeItems = [
+        { path: '#', size: 'S' },
+        { path: '#', size: 'M' },
+        { path: '#', size: 'L' },
+        { path: '#', size: 'XL' }
     ]
 
 %}
@@ -64,11 +74,21 @@
 
             <div class="product-show__choose-wrap">
                 <div class="product-show__size-wrap">
-                    Choose size
+                    <span class='product-show__choose choose--size'>Choose size</span> 
+                    <ul class="sizes__list">
+                        {% for item in sizeItems %}
+                        <li class="sizes__item">
+                            <a href=" {{ item.path }}" class="sizes__link"> {{ item.size }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
                 </div>
 
                 <div class="product-show__quantity-wrap">
-                    Choose quantity
+                    <span class='product-show__choose choose--quantity'> Choose quantity </span>
+                    <div class="product-show_counter-wrap">
+
+                    </div>
                 </div>
 
 
