@@ -1,5 +1,5 @@
 .topbar {
-  position: relative;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
@@ -19,8 +19,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include container;
   margin-top: 10px;
- @include container;
 }
 
 .social__list {
