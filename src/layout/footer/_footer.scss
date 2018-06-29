@@ -22,16 +22,9 @@
     padding: 0;
 }
 
-.logo-img {
-}
-
 .copyright {
     margin: 0;
     padding: 0;
-}
-
-.copyright__title {
-
 }
 
 .footer__style {
@@ -73,7 +66,8 @@
 
 .nav__footer--list {
      padding: 0 0 10px 0;
-         
+     list-style: none;
+                  
      &:not(:first-child) {
         margin-left: 65px;
     }
@@ -82,12 +76,20 @@
 
 .nav__footer--item {
     display: flex;
-   
+    
+    
 }
 
 .nav__footer--link {
-    color: $graphite;
-  
+
+    &::before {
+        content: '•';
+        display: inline-block;
+        vertical-align: center;
+        color: $deepblue;
+        margin-right: 15px;
+    } 
+      
     &:hover {
         color: $orange;
         text-decoration: none;
