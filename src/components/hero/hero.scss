@@ -1,0 +1,8 @@
+.hero-content-wrap{
+    background: url(img/background.png);
+}
+
+.hero-caption{
+    text-transform: uppercase;
+    @include rem(52);
+}
