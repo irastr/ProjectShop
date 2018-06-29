@@ -5,4 +5,5 @@
 .hero-caption{
     text-transform: uppercase;
     @include rem(52);
+    color: $orange;
 }
