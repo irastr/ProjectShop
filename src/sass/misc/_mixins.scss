@@ -1,6 +1,24 @@
 @mixin container {
     width: 1140px;
     margin: 0 auto;   
+
+    @media screen and (max-width: 1140px) {
+        width: 1000px;
+    }
+}
+
+@mixin ui-reset-btn {
+    background: none;
+    padding: 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+@mixin reset-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 @mixin extra-large {
