@@ -4,7 +4,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    justify-content: center;
+    justify-content: space-between;
 
     @include large {
         width: 800px;
@@ -17,7 +17,7 @@
 }
 
 .item-card-wrap {
-    margin: 80px 7px 0 7px;
+    margin-top: 80px;
     padding: 29px 50px;
     background-color: #fff;
     max-width: 270px;
@@ -54,8 +54,10 @@
 
 .item-card__img {
     display: block;
-    // max-height: 215px;
-    max-height: 87px;
+    max-height: 215px;
+    // max-height: 87px;
+
+    transition: max-height 0.3s ease-in-out;
 
     @include medium {
         max-height: 170px;
@@ -79,6 +81,8 @@
     text-align: center;
     line-height: 1;
 
+    transition: color 0.3s ease-in-out;
+
     @include medium {
         @include rem(16);
     }
@@ -87,9 +91,12 @@
 .item-card__new-features--wrap {
     position: absolute;
     width: inherit;
-    height: inherit;
-    // display: none;
+    height: inherit;    
     bottom: 29px;
+    transition: display 0.7s ease-in-out;
+
+    display: none;
+    
 }
 
 .item-card__size {
@@ -110,7 +117,9 @@
     position: absolute;
     bottom: 29px;
 
-    display: none;
+    transition: display 0.3s ease-in-out;
+
+    // display: none;
 }
 
 .item-card__color-btn--wrap {
@@ -164,7 +173,7 @@
 .item-card__icons-wrap {
     @include reset-list;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
     line-height: 1;
@@ -185,23 +194,27 @@
     width: 100%;
     color: $deepblue;
 
-    &:hover {
+    &:focus {
         color: $orange;
+    }
+
+    &:active {
+        pointer-events: none;
     }
 }
 
-// .item-card-wrap:hover .item-card__new-features--wrap {
-//     display: block;
-// }
+.item-card-wrap:hover .item-card__new-features--wrap {
+    display: block;
+}
 
-// .item-card-wrap:hover .item-card__price {
-//     display: none;
-// }
+.item-card-wrap:hover .item-card__price {
+    display: none;
+}
 
-// .item-card-wrap:hover .item-card__title {
-//     color: $orange;
-// }
+.item-card-wrap:hover .item-card__title {
+    color: $orange;
+}
 
-// .item-card-wrap:hover .item-card__img {
-//     max-height: 87px;
-// }
+.item-card-wrap:hover .item-card__img {
+    max-height: 87px;
+}
