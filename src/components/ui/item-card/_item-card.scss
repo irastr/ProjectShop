@@ -1,0 +1,220 @@
+.item-card__list {
+    @include container;
+    @include reset-list;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: space-between;
+
+    @include large {
+        width: 800px;
+    }
+
+    @include medium {
+        width: 700px;
+    }
+
+}
+
+.item-card-wrap {
+    margin-top: 80px;
+    padding: 29px 50px;
+    background-color: #fff;
+    max-width: 270px;
+    min-height: 365px;
+    position: relative;
+    transition: box-shadow 0.2s ease-in-out;
+
+    &:hover {
+       box-shadow:0px 6px 32px -12px $darkgrey;
+    }
+
+    @include large {
+        margin: 40px 20px 0 20px;
+    }
+
+    @include medium {
+       padding: 20px 33px;
+       min-height: 320px;
+    }
+}
+
+.item-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+}
+
+.item-card-img-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.item-card__img {
+    display: block;
+    max-height: 215px;
+    // max-height: 87px;
+
+    transition: max-height 0.3s ease-in-out;
+
+    @include medium {
+        max-height: 170px;
+    }
+}
+
+.item-card__descr-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-card__title {
+    @include rem(18);
+    color: $deepblue;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 29px;
+    text-align: center;
+    line-height: 1;
+
+    transition: color 0.3s ease-in-out;
+
+    @include medium {
+        @include rem(16);
+    }
+}
+
+.item-card__new-features--wrap {
+    position: absolute;
+    width: inherit;
+    height: inherit;    
+    bottom: 29px;
+    transition: display 0.7s ease-in-out;
+
+    display: none;
+    
+}
+
+.item-card__size {
+    display: block;
+    text-align: center;
+    color: $deepblue;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    line-height: 1;
+}
+
+.item-card__price {
+    @include rem(18);
+    color: $orange;
+    font-weight: 700;
+    margin: 0;
+    position: absolute;
+    bottom: 29px;
+
+    transition: display 0.3s ease-in-out;
+
+    // display: none;
+}
+
+.item-card__color-btn--wrap {
+    @include reset-list;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+    line-height: 1;
+}
+
+.item-card__color--item {
+    &:not(:first-child) {
+        margin-left: 5px;
+    }
+}
+
+.item-card__color-btn {
+    @include ui-reset-btn;
+    width: 14px;
+    height: 14px;
+    background: $darkgrey;
+    border-radius: 50%;
+    outline: none;
+}
+
+.item-card__color-btn--red {
+    background: #e12e3f;
+}
+
+.item-card__color-btn--deepblue {
+    background: $deepblue;
+}
+
+.item-card__color-btn--blue {
+    background: #3ab3ff;
+}
+
+.item-card__color-btn--green {
+    background: #2fd967;
+}
+
+.item-card__border {
+    display: block;
+    height: 1px;
+    background: #f2f4f7;
+    width: 170px;
+    margin-bottom: 30px;
+}
+
+.item-card__icons-wrap {
+    @include reset-list;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    line-height: 1;
+
+}
+
+.item-card__icons--item {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-card__icons--link {
+    display: block;
+    height: 100%;
+    width: 100%;
+    color: $deepblue;
+
+    &:focus {
+        color: $orange;
+    }
+
+    &:active {
+        pointer-events: none;
+    }
+}
+
+.item-card-wrap:hover .item-card__new-features--wrap {
+    display: block;
+}
+
+.item-card-wrap:hover .item-card__price {
+    display: none;
+}
+
+.item-card-wrap:hover .item-card__title {
+    color: $orange;
+}
+
+.item-card-wrap:hover .item-card__img {
+    max-height: 87px;
+}

@@ -1,12 +1,12 @@
 .topbar {
-  position: relative;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   z-index: 99;
 }
 
-.fas{
+.fa-phone, .fa-envelope{
   color: $orange;
 }
 
@@ -19,8 +19,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 10px;
- @include container;
+  @include container;
+  margin-top: 18px;
+  margin-bottom: 23px;
 }
 
 .social__list {

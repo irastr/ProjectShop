@@ -1,0 +1,200 @@
+
+.container--product-show {
+    display: flex;
+    width: 1022px;
+    margin: 0 auto;
+    
+
+    @include large {
+        // width: 1022px;
+        
+    }
+}
+
+
+
+
+
+/**
+*   Slider
+**/
+
+.product-show__slider-wrap {
+    width: 320px;
+    margin-right: 87px;
+}
+
+.product-show__img-wrap {
+    display: flex;
+    justify-content: center;
+    // width: 320px;
+}
+
+.slider__list {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+    margin-top: 68px;
+}
+
+.slider__item {
+    background-color:  #f4f6f8;
+    width: 95px;
+    height: 69px;
+    display: block;
+    position: relative;
+   
+
+    &:not(:last-child) {
+        margin-right: 20px;
+    }
+
+    
+}
+
+.slider__link {
+    &:focus::before {
+
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;      
+        left: 0;
+        top: 0;  
+        background-color: $orange;
+        opacity: 0.78;
+        z-index: 5;
+        
+    
+}
+}
+
+
+.slider__img {
+    display: flex;
+    margin: 0 auto;
+    // padding-top: 10px;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+
+
+/**
+*   Descr
+**/
+
+.product-show__title {
+    // font-size: 52.04px;
+    @include rem(52);
+    margin-top: 0;
+}
+
+
+
+.product-show__choose-wrap {
+    display: flex;
+    justify-content: space-between;
+    border-top: solid $lightgray 1px;
+    border-bottom: solid $lightgray 1px; 
+    padding: 40px 0;
+}
+
+.product-show__size-wrap {
+    display: flex;
+}
+
+.sizes__list {
+    display: flex;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.sizes__item {
+    position: relative;
+
+    &:not(:last-child) {
+        margin-right: 20px;
+    }
+
+
+    &:not(:last-child):after {
+        content: "-";
+        position: absolute;
+        color: $deepblue;
+        top: 0;
+        left: 15px;
+        
+       
+    }
+
+
+}
+
+.sizes__link {
+   text-decoration: none;
+   color: $deepblue;
+   
+   @include rem(14.03);
+
+   &:focus {
+    color: $orange;
+    @include rem(18.03);
+
+   }
+
+   &:hover {
+    text-decoration: none;
+    color: $deepblue;
+
+   }
+
+
+}
+
+
+.product-show__order-wrap {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+
+.product-show__choose {
+    color: $deepblue;
+  
+    @include rem(17.95);
+}
+
+.product-show__price {
+    @include rem(19.83);
+    color: $deepblue;
+    font-weight: 900;
+}
+
+.product-show__order {
+    display: flex;
+}
+
+.order__list {
+    display: flex;
+    list-style: none;
+}
+
+
+
+/**
+*   Button
+**/
+
+.order-btn {
+    color:   #ffffff;
+    background-color: $orange;
+    border: none;
+    border-radius: 30px;
+    padding: 18px 23px;
+    @include rem(18);
+    line-height: 18px;
+
+
+}
