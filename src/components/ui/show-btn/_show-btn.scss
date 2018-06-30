@@ -35,13 +35,8 @@
     }
 
     @include small {
-        width: 351px;
-        width: 100%;
+        width: 270px;
     }
-
-    @include extra-small {
-        width: 100%;
-    }   
 }
 
 .show-btn__list {
