@@ -1,1 +1,76 @@
+.news-letter-wrap {
+    background-color: $grey;
+    width: 100%;
+    padding-bottom: 122px;
+}
 
+.news-letter-container {
+    @include container;
+    height: 123px;
+    background-color: #fff;
+    padding: 37px 42px 36px 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.news-letter__text-wrap {
+    width: 50%;
+    display: flex;
+}
+
+.news-letter__title {
+    margin: 0;
+    text-transform: uppercase;
+    color: $orange;
+    @include rem(18);
+}
+
+.news-letter__descr {
+    margin: 0 0 0 23px;
+    @include rem(14);
+    font-style: italic;
+    color: $deepblue;
+}
+
+.news-letter__form {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.news-letter__input-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.news-letter__icon {
+    display: block;
+    // height: 15px;
+    width: 18px;
+}
+
+.news-letter__input {
+    margin-left: 10px;
+    border: none;
+    color: #7c8791;
+    @include rem(14);
+    font-style: italic;
+    width: 200px;
+}
+
+.news-letter__btn {
+    @include ui-reset-btn;
+    @include rem(14);
+    background: $orange;
+    line-height: 1;
+    color: #fff;
+    padding: 17px 31px 18px 31px;
+    margin-left: 86px;
+
+    &:active {
+        transform: translateY(1px);
+    }
+}
