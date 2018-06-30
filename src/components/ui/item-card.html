@@ -9,37 +9,83 @@
 
 %}
 
+{%
+
+    set buttons = [
+        {color: 'item-card__color-btn--red'},
+        {color: 'item-card__color-btn--deepblue'},
+        {color: 'item-card__color-btn--blue'},
+        {color: 'item-card__color-btn--green'}
+    ]
+
+%}
+
+{%
+
+    set icons = [
+        {icon: 'fa-globe'},
+        {icon: 'fa-cart-arrow-down'},
+        {icon: 'fa-heart'}
+    ]
+
+%}
+
+<!-- list with cards -->
 <ul class="item-card__list">
 
+    <!-- item card -->
     {% for item in list %}
     <li class="item-card-wrap">
-        <figure class="item-card">
-            <img src="{{ item.img }}" alt="" class="item-card__img">
-            <h4 class="item-card__title">
-                {{ item.title }}
-            </h4>
-            <span class="item-card__size">
-                {{ item.size }}
-            </span>
-                <ul class="item-card__color-btn--wrap">
-                    <li class="item-card__color--item">
-                        <button class="item-card__color-btn item-card__color-btn--red"></button>
-                    </li>
-                    <li class="item-card__color-btn--item">
-                        <button class="item-card__color-btn item-card__color-btn--deepblue"></button>
-                    </li>
-                    <li class="item-card__color-btn--item">
-                        <button class="item-card__color-btn item-card__color-btn--blue"></button>
-                    </li>
-                    <li class="item-card__color-btn--item">
-                        <button class="item-card__color-btn item-card__color-btn--green"></button>
-                    </li>
-                </ul>
-            <span class="item-card__price">
-                {{ item.price }}
-            </span>
-        </figure>
-    </li>
+        <!-- <a href="#" class="item-card__link"> -->
+            <figure class="item-card">
+    
+                <div class="item-card-img-container">
+                    <img src="{{ item.img }}" alt="" class="item-card__img">
+                </div>
+    
+                <div class="item-card__descr-container">
+    
+                    <h4 class="item-card__title">
+                    {{ item.title }}
+                    </h4>
+    
+                    <span class="item-card__size">
+                    {{ item.size }}
+                    </span>
+
+                    <!-- color btns -->
+                    <ul class="item-card__color-btn--wrap">
+                    
+                        {% for btn in buttons %}
+                        <li class="item-card__color--item">
+                            <button class="item-card__color-btn {{ btn.color }}"></button>
+                        </li>
+                        {% endfor %}
+                    
+                    </ul> <!-- ./color btns -->
+                    
+                    <span class="item-card__border"></span>
+                    
+                    <!-- purchase btns -->
+                    <ul class="item-card__icons-wrap">
+                    
+                        {% for icons in icons %}
+                        <li class="item-card__icons--item">
+                            <a href="#" class="item-card__icons--link"> <i class="fas {{ icons.icon }}"></i> </a>
+                        </li>
+                        {% endfor %}
+                    
+                    </ul><!-- purchase btns -->
+
+                    <span class="item-card__price">
+                    {{ item.price }}
+                    </span>
+
+                </div>
+    
+            </figure>
+        <!-- </a> -->
+    </li> <!-- ./item card -->
     {% endfor %}
 
-</ul>
+</ul> <!-- ./list with cards -->

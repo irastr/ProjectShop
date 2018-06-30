@@ -1,11 +1,13 @@
+<!-- Icons -->
 {%
     set orderItems = [
-        { icon: "far fa-heart" , path: '#' },
-        { icon: "fas fa-globe", path: '#' },
-        { icon: "fas fa-cart-plus", path: '#' }
+        { icon: "fas fa-globe" , path: '#' },
+        { icon: "fas fa-cart-plus", path: '#' },
+        { icon: "far fa-heart", path: '#' }
     ]  
-  %}
+  %} <!-- ./Icons -->
 
+  <!-- Slider -->
 {%
     set sliderItems = [
         { path: '#', src: 'img/Shoes.png' },
@@ -13,29 +15,28 @@
         { path: '#', src: 'img/Trousers.png' }
     ]
 
-%}
+%} <!-- ./Slider -->
 
+<!-- Sizes -->
 {%
     set sizeItems = [
-        { path: '#', size: 'S' },
+        { path: '#', size: 'S', class: 'sizes__link--active' },
         { path: '#', size: 'M' },
         { path: '#', size: 'L' },
         { path: '#', size: 'XL' }
     ]
 
-%}
+%} <!-- ./Sizes -->
 <section class="product-show">
     <div class="container--product-show">
+         <!-- Slider -->
         <div class="product-show__slider-wrap">
 
             <div class="product-show__img-wrap">
                     <img src="img/green-coat.png" alt="">
 
             </div>
-            
-
-            
-
+            <!-- Slider list -->
             <ul class="slider__list">
                 {% for item in sliderItems %}
                 <li class="slider__item">
@@ -44,15 +45,11 @@
                     </a>
                 </li>
                 {% endfor %}
-            </ul>
+            </ul> <!-- ./Slider list -->
 
-           
+        </div> .<!-- ./Slider -->
 
-
-
-
-        </div>
-
+        <!-- Product show info -->
         <div class="product-show__info-wrap">
 
             <div class="product-show__descr-wrap">
@@ -67,21 +64,23 @@
 
                 <p class="product-show__descr">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt inventore quas, doloribus pariatur aut repudiandae, unde animi saepe velit sit ipsam, non quam ipsa rem.
+                    
                 </p>
 
             </div>
 
-
+            <!-- Choose -->
             <div class="product-show__choose-wrap">
                 <div class="product-show__size-wrap">
                     <span class='product-show__choose choose--size'>Choose size</span> 
+                    <!-- Sizes -->
                     <ul class="sizes__list">
                         {% for item in sizeItems %}
                         <li class="sizes__item">
-                            <a href=" {{ item.path }}" class="sizes__link"> {{ item.size }}</a>
+                            <a href=" {{ item.path }}" class="sizes__link {{ item.class }}"> {{ item.size }}</a>
                         </li>
                         {% endfor %}
-                    </ul>
+                    </ul> <!-- ./Sizes -->
                 </div>
 
                 <div class="product-show__quantity-wrap">
@@ -92,13 +91,15 @@
                 </div>
 
 
-            </div>
+            </div>  <!-- ./Choose -->
 
             <div class="product-show__order-wrap">
 
-                <span class="product-show__price"> Price: 120$  </span>
+                <span class="product-show__price"> Price : 120$  </span>
 
                 <div class="product-show__order">
+
+                    <!-- Icons -->
 
                     <ul class="order__list">
                         {% for item in orderItems %}
@@ -106,9 +107,7 @@
                                 <a href=" {{ item.path }} " class="order__link"> <i class="{{ item.icon }}"></i></a>
                             </li>
                         {% endfor %}
-                    </ul>
-
-
+                    </ul> <!-- ./Icons -->
         
                     <button class="order-btn">
                         <span class="order-btn__title">Order Now</span>
@@ -117,7 +116,7 @@
                 </div>
             </div>
 
-        </div>
+        </div> <!-- ./Product show info -->
     </div>
 </section>
 
