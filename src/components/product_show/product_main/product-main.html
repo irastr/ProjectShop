@@ -7,15 +7,6 @@
     ]  
   %} <!-- ./Icons -->
 
-  <!-- Slider -->
-{%
-    set sliderItems = [
-        { path: '#', src: 'img/Shoes.png' },
-        { path: '#', src: 'img/Trousers.png' },
-        { path: '#', src: 'img/Trousers.png' }
-    ]
-
-%} <!-- ./Slider -->
 
 <!-- Sizes -->
 {%
@@ -27,27 +18,15 @@
     ]
 
 %} <!-- ./Sizes -->
+
 <section class="product-show">
     <div class="container--product-show">
-         <!-- Slider -->
-        <div class="product-show__slider-wrap">
 
-            <div class="product-show__img-wrap">
-                    <img src="img/green-coat.png" alt="">
-
-            </div>
-            <!-- Slider list -->
-            <ul class="slider__list">
-                {% for item in sliderItems %}
-                <li class="slider__item">
-                    <a href="{{ item.path }}" class="slider__link">
-                        <img src="{{ item.src }}" alt="" class="slider__img">
-                    </a>
-                </li>
-                {% endfor %}
-            </ul> <!-- ./Slider list -->
-
-        </div> .<!-- ./Slider -->
+        <!-- Slider -->
+        
+        {% include 'components/product_show/product-slider/product-slider.html' %}
+        
+        <!-- ./Slider -->
 
         <!-- Product show info -->
         <div class="product-show__info-wrap">
@@ -111,9 +90,8 @@
                         {% endfor %}
                     </ul> <!-- ./Icons -->
         
-                    <button class="order-btn">
-                        <span class="order-btn__title">Order Now</span>
-                    </button>
+                
+                    {% include 'components/ui/order-btn/order-btn.html' %}
                 
                 </div>
             </div>

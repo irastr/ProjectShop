@@ -1,0 +1,32 @@
+   
+{%
+    set sliderItems = [
+        { path: '#', src: 'img/Shoes.png' },
+        { path: '#', src: 'img/Trousers.png' },
+        { path: '#', src: 'img/Trousers.png' }
+    ]
+
+%} 
+ 
+ 
+
+ 
+ <!-- Slider -->
+ <div class="product-show__slider-wrap">
+
+        <div class="product-show__img-wrap">
+                <img src="img/green-coat.png" alt="">
+
+        </div>
+        <!-- Slider list -->
+        <ul class="slider__list">
+            {% for item in sliderItems %}
+            <li class="slider__item">
+                <a href="{{ item.path }}" class="slider__link">
+                    <img src="{{ item.src }}" alt="" class="slider__img">
+                </a>
+            </li>
+            {% endfor %}
+        </ul> <!-- ./Slider list -->
+
+    </div> .<!-- ./Slider -->

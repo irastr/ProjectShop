@@ -39,121 +39,14 @@
 
 }
 
-/**
-*   Slider
-**/
-
-.product-show__slider-wrap {
-    width: 320px;
-    margin-right: 87px;
-
-    @include medium {
-        margin-right: 50px;
-
-    }
-
-    @include small {
-        margin-right: 0px;
-
-    }
-}
-
-.product-show__img-wrap {
-    display: flex;
-    justify-content: center;
-    // width: 320px;
-}
-
-.slider__list {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    // justify-content: space-between;
-    padding: 0;
-    margin-top: 68px;
-    width: 345px;
-
-    @include small {
-        margin-top: 30px;
-    
-    }
-
-}
-
-.slider__link {
-    background-color: $grey;
-    width: 95px;
-    height: 69px;
-    display: block;
-    position: relative;
-   
-
-    &:not(:last-child) {
-        margin-right: 13px;
-    }
-
-
-    &:focus::before {
-
-        content: '';
-        width: 100%;
-        height: 100%;
-        position: absolute;      
-        left: 0;
-        top: 0;  
-        background-color: $orange;
-        opacity: 0.78;
-        z-index: 5;
-        
-    
-    }
-
-    
-}
-
-
-.slider__item {
-    margin-bottom: 20px;
-    &:not(:last-child) {
-        margin-right: 20px;
-    }
-
-    @include small {
-        margin-bottom: 10px;
-
-        &:not(:last-child) {
-            margin-right: 15px;
-        }
-        
-    }
-}
-
-.slider__img {
-    display: flex;
-    margin: 0 auto;
-    // padding-top: 10px;
-    margin: auto;
-    position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;
-}
-
 
 /**
 *   Descr
 **/
 
 
-.product-show__info-wrap {
-    @include small {
-        // display: flex;
-        // align-items: center;
-    }
-}
-
-
-
 .product-show__title {
-    // font-size: 52.04px;
+    
     @include rem(52);
     margin-top: 0;
     margin-bottom: 29px;
@@ -291,11 +184,6 @@
 
 }
 
-// .sizes__link--active {
-//     color: $orange;
-//     @include rem(18.03);
-// }
-
 
 /**
 *   Counter
@@ -394,38 +282,8 @@
 
 .order__item {
     
-
     &:not(:last-child) {
         margin-right: 33px;
     }
 }
 
-
-
-
-
-/**
-*   Button
-**/
-
-.order-btn {
-    color: $white;
-    background-color: $orange;
-    border: none;
-    border-radius: 35px;
-    padding: 18px 23px;
-    @include rem(18);
-    line-height: 12px;
-    cursor: pointer;
-    outline: none;
-    
-
-    &:focus {
-        background: $white;
-        color:  $orange;
-        border:  solid 1px $orange;
-    }
-
-    
-   
-}
