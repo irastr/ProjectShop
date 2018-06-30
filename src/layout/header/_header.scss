@@ -3,6 +3,8 @@
     background: #ffffff;
     border-bottom: 1px solid #edeff1;
     margin-top: 60px;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .logo-link {
@@ -60,6 +62,7 @@
 }
 
 .ui-list_item {
+    width: 20px;
     &:not(:first-child) {
         margin-left: 29px;
     }
@@ -68,7 +71,7 @@
 
 .ui-list__link{
     color: $deepblue;
+    &:hover{
+        color: $orange;
+    }
 }
- .fa-shopping-basket{
-     color: $orange;
- }

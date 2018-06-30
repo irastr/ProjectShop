@@ -1,0 +1,13 @@
+.related-products {
+    background-color: $grey;
+    display: flex;
+    flex-direction: column;
+    padding-top: 118px;
+}
+
+.related-products__title-wrap {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+}

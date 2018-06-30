@@ -16,6 +16,32 @@
     &:hover {
         box-shadow:0px 6px 32px -12px $darkgrey;
     }
+
+    @include large {
+        width: 700px;
+    }
+
+    @media screen and (max-width: 880px) {
+        width: 650px;
+    }
+
+    @include medium {
+        width: 570px;
+    }
+
+    @media screen and (max-width: 599px) {
+        // padding: 0 40px 0 40px;
+        width: 550px;
+    }
+
+    @include small {
+        width: 351px;
+        width: 100%;
+    }
+
+    @include extra-small {
+        width: 100%;
+    }   
 }
 
 .show-btn__list {
