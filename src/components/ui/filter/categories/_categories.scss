@@ -1,0 +1,9 @@
+.filter-title{
+    @include rem(18);
+    color: $orange;
+}
+
+.filter-list{
+    display: flex;
+    flex-direction: column;
+}
