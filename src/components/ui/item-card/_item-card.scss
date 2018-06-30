@@ -23,7 +23,7 @@
     max-width: 270px;
     min-height: 365px;
     position: relative;
-    transition: box-shadow 0.2s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out;
 
     &:hover {
        box-shadow:0px 6px 32px -12px $darkgrey;
@@ -204,6 +204,7 @@
 }
 
 .item-card-wrap:hover .item-card__new-features--wrap {
+    transition-delay: 5s;
     display: block;
 }
 
