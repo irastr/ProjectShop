@@ -60,6 +60,7 @@
 }
 
 .ui-list_item {
+    width: 20px;
     &:not(:first-child) {
         margin-left: 29px;
     }
@@ -68,7 +69,7 @@
 
 .ui-list__link{
     color: $deepblue;
+    &:hover{
+        color: $orange;
+    }
 }
- .fa-shopping-basket{
-     color: $orange;
- }
