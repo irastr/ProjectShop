@@ -65,20 +65,7 @@
     }
 
     handleRangeFilter(event) {
-      const filteredProducts = this.filterProducts(event.target.value);
-      
-      this.setState({
-        rangeFilter: event.target.value,
-        products: filteredProducts
-      })
-    }
-
-    filterProducts(filterPriceValue) {
-      const products = this.state.products.filter(product => {
-        return +product.price > +filterPriceValue
-      })
-
-      return products;
+      this.setState({rangeFilter: event.target.value})
     }
 
     render() {
@@ -86,22 +73,27 @@
         <div>
           Price more than - {this.state.rangeFilter} (Hint: after 10 one product will vanish)
           <br />
-          <input type="range" id="start" name="volume" min="0" max="200" 
-          value={this.state.rangeFilter}
-          onChange={this.handleRangeFilter} 
+          <input 
+            type="range" 
+            min="0" 
+            max="200" 
+            value={this.state.rangeFilter}
+            onChange={this.handleRangeFilter} 
           />
           <div>
             {
-              this.state.products.map(product => (
-                <div key={product.title}>
-                  <h1>{product.title}</h1>
-                  <h2>{product.subtitle}</h2>
-                  <h3>{product.description}</h3>
-                  <h4>{product.price}</h4>
-                  <h5>{product.currency}</h5>
-                  <hr/>
-                </div>
-              ))
+              this.state.products
+                .filter(product => +product.price > +this.state.rangeFilter)
+                .map(product => (
+                  <div key={product.title}>
+                    <h1>{product.title}</h1>
+                    <h2>{product.subtitle}</h2>
+                    <h3>{product.description}</h3>
+                    <h4>{product.price}</h4>
+                    <h5>{product.currency}</h5>
+                    <hr/>
+                  </div>
+                ))
             }
             </div>
         </div>
@@ -109,7 +101,5 @@
     }
   }
 
-  ReactDOM.render(
-    React.createElement(App, null),
-    document.getElementById('root'));
+  ReactDOM.render(<App />, document.getElementById('root'));
 </script>
