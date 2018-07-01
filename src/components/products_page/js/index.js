@@ -1,1 +1,1 @@
-alert('adasd')
+alert('test');
