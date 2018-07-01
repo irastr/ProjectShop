@@ -1,0 +1,115 @@
+<div id="root"></div>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+<script type="text/babel">
+// Can't move React code into separate file, smth wrong with paths in builded js - watch gulp
+  class App extends React.Component {
+
+    constructor() {
+      super();
+
+      // Products from db - basically we must fetch data in componentWillMount method but we have not api, so...
+      this.state = {
+        rangeFilter: 0,
+        products: [
+          {
+            title: "Full winter kit",
+            subtitle: "Half jacket + Skinny trousers",
+            description: "Lorem ipsum bla-bla...",
+            images: {
+              cover: "main.jpg",
+              pics: [
+                "first.jpg",
+                "second.jpg"
+              ]
+            },
+            price: "120",
+            currency: "$",
+            sizes: {
+              M: "Medium",
+              L: "Large"
+            },
+            colours: [
+              "Red",
+              "Blue"
+            ]
+          },
+          {
+            title: "Full winter kit 1",
+            subtitle: "Half jacket + Skinny trousers 1",
+            description: "Lorem ipsum bla-bla... 1",
+            images: {
+              cover: "main.jpg",
+              pics: [
+                "first.jpg",
+                "second.jpg"
+              ]
+            },
+            price: "10",
+            currency: "$",
+            sizes: {
+              M: "Medium",
+              L: "Large"
+            },
+            colours: [
+              "Red",
+              "Blue"
+            ]
+          }
+        ]
+      }
+
+      this.handleRangeFilter = this.handleRangeFilter.bind(this);
+    }
+
+    handleRangeFilter(event) {
+      const filteredProducts = this.filterProducts(event.target.value);
+      
+      this.setState({
+        rangeFilter: event.target.value,
+        products: filteredProducts
+      })
+    }
+
+    filterProducts(filterPriceValue) {
+      const products = this.state.products.filter(product => {
+        return +product.price > +filterPriceValue
+      })
+
+      return products;
+    }
+
+    render() {
+      return (
+        <div>
+          Price more than - {this.state.rangeFilter} (Hint: after 10 one product will vanish)
+          <br />
+          <input type="range" id="start" name="volume" min="0" max="200" 
+          value={this.state.rangeFilter}
+          onChange={this.handleRangeFilter} 
+          />
+          <div>
+            {
+              this.state.products.map(product => (
+                <div key={product.title}>
+                  <h1>{product.title}</h1>
+                  <h2>{product.subtitle}</h2>
+                  <h3>{product.description}</h3>
+                  <h4>{product.price}</h4>
+                  <h5>{product.currency}</h5>
+                  <hr/>
+                </div>
+              ))
+            }
+            </div>
+        </div>
+      );
+    }
+  }
+
+  ReactDOM.render(
+    React.createElement(App, null),
+    document.getElementById('root'));
+</script>
