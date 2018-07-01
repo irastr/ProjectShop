@@ -57,7 +57,7 @@
 }
 
 .nav__link {
-    @include rem(12);
+    @include rem(16);
     color: $deepblue;
     display: block;
     text-decoration: none;

@@ -29,11 +29,13 @@
 
   @include medium{
     width: 700px;
+    justify-content: flex-start;
   
   }
 
   @include small{
     width: 500px;
+    justify-content: flex-start;
   }
 
 
@@ -52,6 +54,7 @@
   padding: 0;
   list-style: none;
   display: flex;
+  
   
   
 }
@@ -79,6 +82,9 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  @include medium{
+    margin-left: 10px;
+  }
   
 }
 
