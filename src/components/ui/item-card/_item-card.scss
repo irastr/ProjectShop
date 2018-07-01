@@ -50,7 +50,7 @@
     }
 
     @include large {
-        margin: 40px 0px 0 0px;
+        margin: 50px 0px 0 0px;
         min-width: 270px;
         min-height: 365px;
     }
@@ -62,7 +62,7 @@
     @include small {
         width: 100%;
         height: 100%;
-        margin: 20px 0px 0 0px;
+        margin: 30px 0px 0 0px;
     }
 }
 
@@ -83,7 +83,7 @@
     }
 
     @include small {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
 }
 
@@ -97,10 +97,6 @@
     @include medium {
         max-height: 190px;
     }
-
-    // @include small {
-    //     max-height: 150px;
-    // }
 }
 
 .item-card__descr-container {
@@ -142,17 +138,52 @@
     
 }
 
-.item-card__size {
-    display: block;
-    text-align: center;
-    color: $deepblue;
-    font-size: 14px;
-    letter-spacing: 2px;
+.item-card__size-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 30px;
-    line-height: 1;
+    letter-spacing: 3px;
+    @include rem(14);
+}
 
-    @include small {
-        margin-bottom: 19px;
+.item-card__size {
+    @include reset-list;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    margin-left: 6px;
+}
+
+.size__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:not(:last-child):after {
+        content: "-";
+        color: $deepblue;
+    }
+}
+
+.size__link {
+    text-decoration: none;
+    @include rem(14);
+    color: $deepblue;
+
+    &:focus {
+        color: $orange;
+        @include rem(18.03);
+    }
+
+    &:active {
+        pointer-events: none;
+
+        @include small {
+            color: $orange;
+            @include rem(18.03); 
+        }
     }
 }
 
@@ -174,6 +205,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     margin-bottom: 30px;
     line-height: 1;
 
@@ -195,6 +227,11 @@
     background: $darkgrey;
     border-radius: 50%;
     outline: none;
+
+    &:focus {
+        width: 17px;
+        height: 17px;
+    }
 }
 
 .item-card__color-btn--red {
@@ -255,18 +292,20 @@
 
     &:active {
         pointer-events: none;
+    }
 
+    &::active {
         @include small {
             color: $orange;
         }
     }
 }
-
-// .item-card__icons--link:active {
-//     @include small {
-//       color: $orange;
-//     }
-// }
+        
+.item-card__icons--link:active {
+    @include small {
+      color: $orange;
+    }
+}
 
 .item-card-wrap:hover .item-card__new-features--wrap {
     transition-delay: 5s;
