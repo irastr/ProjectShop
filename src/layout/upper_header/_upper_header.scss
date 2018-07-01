@@ -24,11 +24,27 @@
   margin-bottom: 23px;
 
   @include large{
-    width: 800px;
+    width: 900px;
   }
-  @include medium {
+
+  @include medium{
     width: 700px;
+  
+  }
+
+  @include small{
+    width: 500px;
+  }
+
+
+  
 }
+
+
+.social{
+  @include medium{
+    display: none;
+  }
 }
 
 .social__list {
@@ -36,9 +52,7 @@
   padding: 0;
   list-style: none;
   display: flex;
-  @include large{
-    display: none;
-  }
+  
   
 }
 
@@ -48,7 +62,7 @@
 
 .social__link {
   color: $deepblue;
-  font-size: 12px;
+  @include rem(12);
   transition: color .1s ease-in-out;
   font-style: normal;
 
@@ -65,9 +79,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  @include small{
-    padding-left: 15px;
-  }
+  
 }
 
 .contacts__item:not(:first-child) {
@@ -78,7 +90,7 @@
   color: $deepblue;
   text-decoration: none;
   font-style: normal;
-  font-size: 13px;
+  @include rem(13);
 }
 
 .contacts__link:hover {
@@ -88,7 +100,7 @@
 
 .contacts__icon,
 .contacts__descr {
-  transition: color .1s ease-in-out;
+  transition: color .2s ease-in-out;
 }
 
 .contacts__descr {
