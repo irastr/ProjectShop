@@ -17,6 +17,7 @@
         box-shadow:0px 6px 32px -12px $darkgrey;
     }
 
+
     @include large {
         width: 700px;
     }
@@ -37,6 +38,10 @@
     @include small {
         width: 351px;
         width: 100%;
+
+        &:active {
+            box-shadow:0px 6px 32px -12px $darkgrey;
+        }
     }
 
     @include extra-small {
