@@ -24,13 +24,26 @@
 .hero-wrap::before {               
     background: url('../img/background.png') ;    
    
-    z-index: -99;    
+    z-index: -99; 
+    
+    @include medium {
+        background: white;
+    }
 }
 
 .hero-wrap::after {  
     background:  url('../img/img.png');
     z-index: -99;
+
+    @include medium {
+        background: white;
+    }
 }
+
+
+
+
+
 
 .hero-desr_wrap{
     @include container;
