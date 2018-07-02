@@ -34,6 +34,10 @@
 @import '../components/hero/hero';
 @import '../components/ui/show-btn/show-btn';
 @import '../components/ui/news-letter/news-letter';
+@import '../components/ui/filter/categories/categories';
+@import '../components/ui/filter/brands/brands';
+@import '../components/ui/filter/price/price';
+@import '../components/ui/filter/sizes/sizes';
 
 
 
@@ -43,4 +47,6 @@
 
  @import '../components/product_show/product_main/product-main';
  @import '../components/product_show/product-slider/product-slider.scss';
- @import '../components/ui/order-btn/order-btn.scss'
+ @import '../components/ui/order-btn/order-btn.scss';
+ @import '../components/product_show/related_products/related_products';
+ @import '../components/product_show/related_products/related_cards/related_cards';

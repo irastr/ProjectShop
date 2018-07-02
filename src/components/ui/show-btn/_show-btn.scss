@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     margin-top: 80px;
-
 }
 
 .show-btn-container {
@@ -17,7 +16,31 @@
     &:hover {
         box-shadow:0px 6px 32px -12px $darkgrey;
     }
-    // margin: 0 14px 0 14px;
+
+    @include large {
+        width: 700px;
+    }
+
+    @media screen and (max-width: 880px) {
+        width: 650px;
+    }
+
+    @include medium {
+        width: 570px;
+    }
+
+    @media screen and (max-width: 599px) {
+        // padding: 0 40px 0 40px;
+        width: 550px;
+    }
+
+    @include small {
+        width: 270px;
+        
+        &:active {
+            box-shadow:0px 6px 32px -12px $darkgrey;
+        }
+    } 
 }
 
 .show-btn__list {

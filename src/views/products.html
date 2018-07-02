@@ -2,4 +2,9 @@
 
 {% block title %} Products {% endblock %}
 
-{% include 'components/new_arrivals/new_arrivals.html' %}
+{% block content%} 
+
+{% include 'components/products_page/products.html' %}
+{% include 'components/ui/news-letter/news-letter.html' %}
+
+{% endblock %}

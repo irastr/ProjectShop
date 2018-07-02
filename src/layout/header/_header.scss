@@ -3,6 +3,8 @@
     background: #ffffff;
     border-bottom: 1px solid #edeff1;
     margin-top: 60px;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .logo-link {
@@ -12,6 +14,10 @@
 .logo-wrap {
     margin-top: 25px;
     margin-right: 83px;
+    
+    @include small{
+        display: none;
+    }
 }
 
 .navbar-wrap {
@@ -23,6 +29,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 
 .nav-list {
@@ -50,7 +57,7 @@
 }
 
 .nav__link {
-    @include rem(12);
+    @include rem(16);
     color: $deepblue;
     display: block;
     text-decoration: none;
@@ -60,6 +67,7 @@
 }
 
 .ui-list_item {
+    width: 20px;
     &:not(:first-child) {
         margin-left: 29px;
     }
@@ -68,7 +76,7 @@
 
 .ui-list__link{
     color: $deepblue;
+    &:hover{
+        color: $orange;
+    }
 }
- .fa-shopping-basket{
-     color: $orange;
- }
