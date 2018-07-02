@@ -17,7 +17,7 @@
           {
             title: "Full winter kit",
             subtitle: "Half jacket + Skinny trousers",
-            description: "Lorem ipsum bla-bla...",
+            description: "Lorem ipsum ",
             images: {
               cover: "main.jpg",
               pics: [
@@ -76,7 +76,7 @@
           <input 
             type="range" 
             min="0" 
-            max="200" 
+            max="1000" 
             value={this.state.rangeFilter}
             onChange={this.handleRangeFilter} 
           />
@@ -86,7 +86,7 @@
                 .filter(product => +product.price > +this.state.rangeFilter)
                 .map(product => (
                   <div key={product.title}>
-                    <h1>{product.title}</h1>
+                    <h2>{product.title}</h2>
                     <h2>{product.subtitle}</h2>
                     <h3>{product.description}</h3>
                     <h4>{product.price}</h4>

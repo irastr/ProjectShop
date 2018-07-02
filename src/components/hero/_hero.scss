@@ -4,19 +4,26 @@
     color: $orange;
     margin-top: 0;
 }
+
+.separator{
+    display: none;
+    @include large{
+        display: inline;
+        height: 12px;
+        border: 0;
+        box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+        }
+    }
+
+
 .hero-wrap{
     width: 100%;
     height: 650px;
     position: relative;
-    @include medium{
-        display: none;
-    }
+    
     
 }
-.girl_img{
-    background:  url('../img/img.png');
-    z-index: -98;
-}
+
 
 .hero-wrap::before, .hero-wrap::after {
     content: '';
@@ -30,18 +37,33 @@
 .hero-wrap::before {               
     background: url('../img/background.png') ;    
     z-index: -100;    
+    @include large{
+        background: #f4f6f8;
+        width: 100%;
+    }
 }
 
 .hero-wrap::after {  
     background:  url('../img/img.png');
     z-index: -99;
+    @include large{
+        background: #f4f6f8;
+        width: 100%;
+    }
 }
 
 .hero-desr_wrap{
     position: absolute;
-    // @include container;
+    @include container;
     margin-top: 229px;
     margin-left: 224px;
+    @include large{
+        width: 700px;
+    }
+
+    @include medium{
+        width: 570px;
+    }
 }
 
 .hero-sale{
@@ -58,7 +80,7 @@
     margin-top: 63px;
 }
 
-.hero_order-btn{
+.hero_order-link{
     text-decoration: none;
     color: $orange;
     margin-left: 31px;
