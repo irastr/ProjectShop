@@ -29,7 +29,9 @@
     list-style: none;
     padding: 0;
     margin-top: 68px;
-    width: 345px;
+    width: 316px;
+
+
 
     @include small {
         margin-top: 30px;
@@ -45,10 +47,6 @@
     display: block;
     position: relative;
    
-
-    &:not(:last-child) {
-        margin-right: 13px;
-    }
 
 
     &:focus::before {
@@ -71,9 +69,11 @@
 
 .slider__item {
     margin-bottom: 20px;
-    &:not(:last-child) {
-        margin-right: 20px;
+
+    &:not(:nth-child(3n)) {
+        margin-right: 15px;
     }
+  
 
     @include small {
         margin-bottom: 10px;
