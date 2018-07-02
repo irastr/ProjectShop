@@ -1,0 +1,37 @@
+<div id="quantity"></div>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+<script type="text/babel">
+
+class Counter extends Component {
+  state = {
+    count: 1
+  }
+
+  _increment = () => {
+    this.setState({
+      count: this.state.count + 1
+    })
+  }
+  _decrement = () => {
+    this.setState({
+      count: this.state.count - 1
+    })
+  }
+
+  render () {
+    return (
+    <div >
+      <button onClick={this._decrement}>-</button> 
+      <h1>{this.state.count}</h1>
+      <button onClick={this._increment}>+</button>
+    </div>)
+
+  }
+}
+
+
+    ReactDOM.render(<Counter />, document.getElementById('quantity'));
+</script>

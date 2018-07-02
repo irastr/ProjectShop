@@ -13,11 +13,39 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include large {
+        width: 700px;
+        flex-direction: column;
+        height: auto;
+        padding: 27px 32px 26px 45px;
+    }
+
+    @media screen and (max-width: 880px) {
+        width: 650px;
+    }
+
+    @include medium {
+        width: 570px;
+    }
+
+    @media screen and (max-width: 599px) {
+        // padding: 0 40px 0 40px;
+        width: 550px;
+    }
+
+    @include small {
+        width: 270px;
+    }
 }
 
 .news-letter__text-wrap {
     width: 50%;
     display: flex;
+
+    @include large {
+        width: auto;
+    }
 }
 
 .news-letter__title {
@@ -39,6 +67,15 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
+    @include large {
+        width: auto;
+        margin-top: 40px;
+    }
+
+    @include small {
+        flex-direction: column;
+    }
 }
 
 .news-letter__input-wrap {
@@ -49,8 +86,8 @@
 
 .news-letter__icon {
     display: block;
-    // height: 15px;
     width: 18px;
+    color: $orange;
 }
 
 .news-letter__input {
@@ -60,6 +97,11 @@
     @include rem(14);
     font-style: italic;
     width: 200px;
+    padding: 0 7px;
+
+    @include small {
+     width: auto;
+    }
 }
 
 .news-letter__btn {
@@ -73,5 +115,15 @@
 
     &:active {
         transform: translateY(1px);
+    }
+
+    @include extra-large {
+        margin-left: 40px;
+    }
+
+    @include small {
+        margin-left: 0;
+        padding: 10px 24px 11px 24px;
+        margin-top: 40px;
     }
 }

@@ -36,6 +36,7 @@
     }
 
     @include small {
+<<<<<<< HEAD
         width: 351px;
         width: 100%;
 
@@ -47,6 +48,14 @@
     @include extra-small {
         width: 100%;
     }   
+=======
+        width: 270px;
+        
+        &:active {
+            box-shadow:0px 6px 32px -12px $darkgrey;
+        }
+    } 
+>>>>>>> c1b911b8c0c5fc9fbec6fcb0f5f78a161667b1e1
 }
 
 .show-btn__list {
