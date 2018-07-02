@@ -87,7 +87,7 @@ gulp.task('js', ['transform'], function() {
 
 
 
-gulp.task('watch',['reload', 'css', 'html','js'], ()=>{
+gulp.task('watch',['reload', 'css', 'js','html'], ()=>{
     gulp.watch('src/**/*.scss', ['css']);
     gulp.watch('src/**/*.html', ['html']);
     gulp.watch('src/**/*.js',['js']);
