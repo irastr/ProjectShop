@@ -1,0 +1,115 @@
+.topbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.contacts__icon{
+  color: $orange;
+}
+
+.topbar {
+  background: #ffffff;
+  border-bottom: 1px solid #edeff1;
+}
+
+.container--topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include container;
+  margin-top: 18px;
+  margin-bottom: 23px;
+
+  @include large{
+    width: 900px;
+  }
+
+  @include medium{
+    width: 700px;
+    justify-content: flex-start;
+  
+  }
+
+  @include small{
+    width: 500px;
+    justify-content: flex-start;
+  }
+
+
+  
+}
+
+
+.social{
+  @include medium{
+    display: none;
+  }
+}
+
+.social__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  
+  
+  
+}
+
+.social__item:not(:first-child) {
+  margin-left: 15px;
+}
+
+.social__link {
+  color: $deepblue;
+  @include rem(12);
+  transition: color .1s ease-in-out;
+  font-style: normal;
+
+}
+
+.social__link:hover {
+  color: $orange;
+  text-decoration: none;
+}
+
+
+.contacts__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  @include medium{
+    margin-left: 10px;
+  }
+  
+}
+
+.contacts__item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.contacts__link {
+  color: $deepblue;
+  text-decoration: none;
+  font-style: normal;
+  @include rem(13);
+}
+
+.contacts__link:hover {
+  color: $orange;
+  text-decoration: none;
+}
+
+.contacts__icon,
+.contacts__descr {
+  transition: color .2s ease-in-out;
+}
+
+.contacts__descr {
+  margin-left: 12px;
+  display: inline-block;
+}

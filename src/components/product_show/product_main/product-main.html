@@ -1,0 +1,106 @@
+<!-- Icons -->
+{%
+    set orderItems = [
+        { icon: "fas fa-globe" , path: '#' },
+        { icon: "fas fa-cart-plus", path: '#' },
+        { icon: "far fa-heart", path: '#' }
+    ]  
+  %} <!-- ./Icons -->
+
+
+<!-- Sizes -->
+{%
+    set sizeItems = [
+        { path: '#', size: 'S', class: 'sizes__link--active' },
+        { path: '#', size: 'M' },
+        { path: '#', size: 'L' },
+        { path: '#', size: 'XL' }
+    ]
+
+%} <!-- ./Sizes -->
+
+<section class="product-show">
+    <div class="container--product-show">
+
+        <!-- Slider -->
+        
+        {% include 'components/product_show/product-slider/product-slider.html' %}
+        
+        <!-- ./Slider -->
+
+        <!-- Product show info -->
+        <div class="product-show__info-wrap">
+
+            <div class="product-show__descr-wrap">
+
+                <h1 class="product-show__title title-main">
+                    full winter kit
+                </h1>
+
+                <h4 class="product-show__sub-title sub-title">
+                    Half Jacket + Skiny Trousers + Boot Leather
+                </h4>
+
+                <p class="product-show__descr">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt inventore quas, doloribus pariatur aut repudiandae, unde animi saepe velit sit ipsam, non quam ipsa rem.
+                    
+                </p>
+
+            </div>
+
+            <!-- Choose -->
+            <div class="product-show__choose-wrap">
+                <div class="product-show__size-wrap">
+                    <span class='product-show__choose choose--size'>Choose size</span> 
+                    <!-- Sizes -->
+                    <ul class="sizes__list">
+                        {% for item in sizeItems %}
+                        <li class="sizes__item">
+                            <a href=" {{ item.path }}" class="sizes__link {{ item.class }}"> {{ item.size }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul> <!-- ./Sizes -->
+                </div>
+                
+                <div class="product-show__quantity-wrap">
+                    <span class='product-show__choose choose--quantity'> Choose quantity </span>
+                    <div class="product-show_counter-wrap" i>
+                       <div id="quantity" > </div>
+                        <a href="#" class="counter_content">+</a>
+                        <span class="counter_content counter_content--number ">3</span>
+                        <a href="#" class="counter_content">-</a>
+                    <div class="product-show_counter-wrap">
+
+                    </div>
+                </div>
+            </div>
+
+
+            </div>  <!-- ./Choose -->
+
+            <div class="product-show__order-wrap">
+
+                <span class="product-show__price"> Price : 120$  </span>
+
+                <div class="product-show__order">
+
+                    <!-- Icons -->
+
+                    <ul class="order__list">
+                        {% for item in orderItems %}
+                            <li class="order__item">
+                                <a href=" {{ item.path }} " class="order__link"> <i class="{{ item.icon }}"></i></a>
+                            </li>
+                        {% endfor %}
+                    </ul> <!-- ./Icons -->
+        
+                
+                    {% include 'components/ui/order-btn/order-btn.html' %}
+                
+                </div>
+            </div>
+
+        </div> <!-- ./Product show info -->
+    </div>
+</section>
+

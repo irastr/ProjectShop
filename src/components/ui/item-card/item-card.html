@@ -1,0 +1,105 @@
+{%
+
+    set list = [
+        {img: 'img/red-coat.png', title: 'Reebok Track Jacket', price: '100$'},
+        {img: 'img/grey-jacket.png', title: 'Reebok Track Jacket', price: '100$'},
+        {img: 'img/red-jacket.png', title: 'Reebok Track Jacket', price: '100$'},
+        {img: 'img/red-jacket.png', title: 'Reebok Track Jacket', price: '100$'}
+    ]
+
+%}
+
+{%
+
+    set buttons = [
+        {color: 'item-card__color-btn--red'},
+        {color: 'item-card__color-btn--deepblue'},
+        {color: 'item-card__color-btn--blue'},
+        {color: 'item-card__color-btn--green'}
+    ]
+
+%}
+
+{%
+
+    set icons = [
+        {icon: 'fas fa-globe'},
+        {icon: 'fas fa-cart-arrow-down'},
+        {icon: 'far fa-heart'}
+    ]
+
+%}
+
+<!-- list with cards -->
+<ul class="item-card__list">
+
+    <!-- item card -->
+    {% for item in list %}
+    <li class="item-card-wrap">
+            <figure class="item-card">
+    
+                <div class="item-card-img-container">
+                    <img src="{{ item.img }}" alt="" class="item-card__img">
+                </div>
+    
+                <div class="item-card__descr-container">
+    
+                    <h4 class="item-card__title">
+                    {{ item.title }}
+                    </h4>
+    
+                    <div class="item-card__new-features--wrap">
+                        <div class ="item-card__size-wrap">
+                            <span>sizes : </span>
+                            <ul class="item-card__size">
+                                <li class="size__item">
+                                    <a href="#" class="size__link">s</a>
+                                </li>
+                                <li class="size__item">
+                                    <a href="#" class="size__link">m</a>
+                                </li>
+                                <li class="size__item">
+                                    <a href="#" class="size__link">l</a>
+                                </li>
+                                <li class="size__item">
+                                    <a href="#" class="size__link">xl</a>
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <!-- color btns -->
+                        <ul class="item-card__color-btn--wrap">
+                        
+                            {% for btn in buttons %}
+                            <li class="item-card__color--item">
+                                <button class="item-card__color-btn {{ btn.color }}"></button>
+                            </li>
+                            {% endfor %}
+                        
+                        </ul> <!-- ./color btns -->
+                        
+                        <span class="item-card__border"></span>
+                        
+                        <!-- purchase btns -->
+                        <ul class="item-card__icons-wrap">
+                        
+                            {% for icons in icons %}
+                            <li class="item-card__icons--item">
+                                <a href="#" class="item-card__icons--link"> <i class="{{ icons.icon }}"></i> </a>
+                            </li>
+                            {% endfor %}
+                        
+                        </ul><!-- purchase btns -->
+                    </div>
+
+                    <span class="item-card__price">
+                    {{ item.price }}
+                    </span>
+
+                </div>
+    
+            </figure>
+    </li> <!-- ./item card -->
+    {% endfor %}
+
+</ul> <!-- ./list with cards -->

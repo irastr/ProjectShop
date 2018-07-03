@@ -1,0 +1,75 @@
+{%
+    set navItems = [
+        { title: 'about us', path: 'index.html' },
+        { title: 'contat us', path: 'index.html' },
+        { title: 'support', path: 'index.html' }
+    ]  
+  %}
+
+{%
+    set navItemsMiddle = [
+        { title: 'our feed', path: 'index.html' },
+        { title: 'terms and conditions', path: 'index.html' },
+        { title: 'our privacy', path: 'index.html' }
+    ]
+%}     
+
+{% 
+    set navItemsLast = [
+        { title: 'join us', path: 'index.html' },
+        { title: 'live support', path: 'index.html' }
+    ]
+%}
+
+
+
+<footer class="footer">
+    <div class="container container--footer">
+        <div class="logo">
+            <a href="#" class="logo__link">
+                <img src="img/logo.png" alt="logo image" class="logo-img">
+            </a>
+            <div class="copyright">
+                <span class="copyright__title footer__style">shopy c 2015. your copy right here</span>
+            </div>
+        </div>
+
+        <nav class="nav__footer">
+            
+            <ul class="nav__footer--list">
+                {% for item in navItems %}
+                    <li class="nav__footer--item">
+                        <!-- <i class="fas fa-circle"></i> -->
+                        <a href="{{ item.path }}" class="nav__footer--link footer__style">{{ item.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+           
+            <ul class="nav__footer--list">
+                {% for item in navItemsMiddle %}
+                    <li class="nav__footer--item">
+                        <!-- <i class="fas fa-circle"></i> -->
+                        <a href="{{ item.path }}" class="nav__footer--link footer__style">{{ item.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            
+            
+            <ul class="nav__footer--list">
+                {% for item in navItemsLast %}
+                    <li class="nav__footer--item">
+                        <!-- <i class="fas fa-circle"></i> -->
+                        <a href="{{ item.path }}" class="nav__footer--link footer__style">{{ item.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+
+        </nav>
+
+        <div class="payment">
+            <span class="payment-method">Payment methods</span>
+            <img src="img/payment images.png" alt="payment methods" class="payment-method-img">
+        </div>
+    </div>
+
+<footer>

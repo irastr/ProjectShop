@@ -1,0 +1,21 @@
+.order-btn {
+    color: $white;
+    background-color: $orange;
+    border: none;
+    border-radius: 35px;
+    padding: 18px 23px;
+    @include rem(18);
+    line-height: 12px;
+    cursor: pointer;
+    outline: none;
+    
+
+    &:focus {
+        background: $white;
+        color:  $orange;
+        border:  solid 1px $orange;
+    }
+
+    
+   
+}

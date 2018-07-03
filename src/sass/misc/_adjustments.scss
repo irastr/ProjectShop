@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    width: 100%;
+    height: 100vh;
+    
+  }
+  
+  body {
+    font-family: 'Source Sans Pro', sans-serif;
+  
+    @include small {
+      overflow-y: scroll;
+      height: auto;
+    }
+  }

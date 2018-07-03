@@ -1,0 +1,294 @@
+.page__wrap{
+    background:#F4F6F8;
+    width:100%;
+    margin-top:-120px;
+}
+
+// full__winter__kit//
+
+
+
+.full__winter__kit__wrap{
+    @include best__sales__container;
+    padding: 0px;
+    
+    height:100px;
+    display: flex; 
+    margin-bottom:60px;
+}
+
+.full__winter__kit__blocks{
+    background-color: #fff;
+    display: flex;
+    width: 670px;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.full__winter__kit__first__block{
+    background-color: #fff;
+    width:100px;
+    position: relative;
+
+}
+.full__winter__kit__first__block>div.box{
+    position: relative;
+    width:66px;
+    height:54px;
+    background-color: rgba(255, 94, 0, 0.75);
+    transform: rotate(45deg);
+    margin: 0px auto;
+    
+}
+.full__winter__kit__first__block>div.box>div.box{
+    position: absolute;
+    width:54px;
+    height:66px;
+    background-color:rgba(255, 94, 0, 0.986);
+    transform: rotate(0deg);
+    left:6px;
+    top:-6px;
+}
+.full__winter__kit__first__block>div.text{
+    color:white;
+    position: absolute;
+    z-index: 10;
+    text-align: center;
+    top:0px;
+    width: 100%;
+}
+.full__winter__kit__first__block>div.text p{
+    padding:0px;
+    line-height: 0;
+}
+.full__winter__kit__first__block>div.text p:nth-child(1){
+    font-style: italic;
+    font-size: .9em;
+}
+.full__winter__kit__first__block>div.text p:nth-child(2){
+    font-size:1.3em;
+}
+.full__winter__kit__second__block{
+    background-color: #fff;
+    padding: 10px,10px,10px,10px;
+    border-right: 1px solid whitesmoke;
+    width:50%;
+}
+.second__block__header{
+    font-size: 1.125rem;
+}
+
+.full__winter__kit__third__block{
+    background-color: #fff;
+}
+
+
+.second__block__header{
+    font-size: 23px;
+    color: #32404C;
+}
+
+.second__block__paragraph{
+    color: #32404C;
+    font-size: 12px;
+}
+
+//---full__winter__kit---//
+
+
+
+
+// adv area//
+
+
+.third__block__paragraph{
+    font-size:30px;
+    color:rgba(255, 94, 0, 0.986);
+    line-height: 1;
+    font-weight: 700;
+}
+.third__block__paragraph i{
+    font-size:.5em;
+}
+.adv__area__block{
+background-color: #fff;
+margin-left:30px;
+width: 470px;
+text-align: center;
+
+}
+
+.adv__area__header{
+    // text-align: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-size:15px;
+    color:#32404c;
+}
+.adv__area__header{
+    padding:15px 0px 5px;
+}
+.adv__area__paragraph{
+    line-height: 0;
+    color:silver;
+}
+.adv__area__header span{
+    color:rgba(255, 94, 0, 0.986);
+}
+.adv__area__paragraph{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+//---adv area---//
+
+
+
+
+
+// jackets//
+
+
+.cards__section{
+    display: flex;
+    justify-content: space-around;
+}
+.page__wrap ul{
+    @include best__sales__container;
+    list-style: none;
+     -ms-flex-wrap: wrap;
+     flex-wrap: wrap;
+     -webkit-box-pack: justify;
+     -ms-flex-pack: justify;
+    
+   
+}
+.page__wrap ul>li{
+    margin-top:40px;
+    margin-bottom:40px;
+    position: relative;
+    width: 370px;
+    height:160px;
+    background: #fff;
+    
+}
+.page__wrap ul>li:hover{
+    -webkit-box-shadow: 0 6px 32px -12px #495662;
+    box-shadow: 0 6px 32px -12px #495662;
+}
+
+.page__wrap ul>li .content{
+justify-content: center;
+align-items: center;
+display:flex;
+height: 100%;
+}
+.page__wrap ul>li .content .img{
+    width:40%;
+}
+.page__wrap ul>li .content .info{
+    width:60%;
+    position: relative;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-left: 1px solid whitesmoke;
+}
+.page__wrap ul>li .content .rating{
+    color:rgba(255, 94, 0, 0.986);
+    width:50%;
+    text-align: left;
+}
+.page__wrap ul>li .content .cost{
+    color:rgba(255, 94, 0, 0.986);
+    width:70%;
+    text-align: right;
+}
+.page__wrap ul>li .content .info .block{
+    display: flex;
+}
+
+.content >.info{
+    color:$darkgrey;
+}
+
+
+
+
+//---jackets---//
+
+
+// news letter//
+
+
+.news__letter__wrap{
+   padding-bottom:120px;
+   justify-content: center;
+   
+}
+
+.news__letter__blocks{
+    background-color: #fff;
+    display: flex;
+    width: 1140px;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px auto;
+    
+}
+
+.news__letter__first__block{
+
+}
+
+.news__letter__main{
+    color:#ff5912;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.news__letter__second__block{
+
+}
+
+.news__letter__second__block__paragraph{
+    font-family:"Lucida Console",monospace;
+    color: #495662;
+    font-size: 13px;
+}
+
+.news__letter__third__block{
+
+}
+
+.news__letter__third__block__paragraph{
+font-family: "Lucida Console",monospace;
+color: #495662;
+font-size: 13px;
+
+
+}
+
+.news__letter__input{
+    border:none;
+}
+
+.news__letter__orange__btn{
+
+}
+
+.news__letter__paragraph{
+
+}
+
+.news__letter__button{
+    background:#ff5912;
+    color:white;
+    height:50px;
+    width:100px;
+    cursor:pointer;
+}
+
+
+
+//---news letter---//

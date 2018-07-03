@@ -1,0 +1,66 @@
+@mixin container {
+    width: 1140px;
+    margin: 0 auto;   
+
+    @media screen and (max-width: 1140px) {
+        width: 920px;
+    }
+}
+
+@mixin ui-reset-btn {
+    background: none;
+    padding: 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+@mixin reset-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+@mixin extra-large {
+    @media screen and (max-width: $extra-large) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media screen and (max-width: $large) {
+        @content;
+    }
+}
+
+@mixin medium {
+    @media screen and (max-width: $medium) {
+        @content;
+    }
+}
+
+@mixin small {
+    @media screen and (max-width: $small) {
+        @content;
+    }
+}
+
+@mixin extra-small {
+    @media screen and (max-width: $extra-small) {
+        @content;
+    }
+}
+
+
+@mixin rem($size) {
+    font-size: $size / $basic-font-size + rem;
+  }
+  
+  @mixin font($weight) {
+    @if $weight == bold {
+      font-family: 'PT Sans Bold';
+    }
+    @if $weight == reg {
+      font-family: 'PT Sans Regular';
+    }
+  }

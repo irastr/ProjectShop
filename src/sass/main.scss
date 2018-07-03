@@ -1,0 +1,56 @@
+@import '../libs/normalize';  
+
+@import '../libs/fontawesome-all';
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900');
+
+
+@import 'misc/env';
+@import 'misc/mixins';
+@import 'misc/adjustments';
+@import 'titles';
+
+
+/**
+*   Split duties and import done styles for components
+**/
+
+/**
+* Layout styles
+**/
+
+@import '../layout/footer/footer';
+@import '../layout/header/header';
+@import '../layout/upper_header/upper_header';
+
+
+
+/** 
+* Components
+**/
+
+@import '../components/new_arrivals/new_arrivals';
+@import '../components/ui/item-card/item-card';
+@import '../components/hero/hero';
+@import '../components/ui/show-btn/show-btn';
+@import '../components/ui/news-letter/news-letter';
+@import '../components/ui/filter/filter';
+
+
+
+
+/**
+ * Product show
+ **/
+
+ @import '../components/product_show/product_main/product-main';
+ @import '../components/product_show/product-slider/product-slider.scss';
+ @import '../components/ui/order-btn/order-btn.scss';
+ @import '../components/product_show/related_products/related_products';
+ @import '../components/product_show/related_products/related_cards/related_cards';
+
+ /**
+ * Best sales 
+ **/
+
+ @import '../components/best__sales/best_sales';
