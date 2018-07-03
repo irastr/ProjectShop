@@ -4,6 +4,8 @@
   top: 0;
   width: 100%;
   z-index: 99;
+
+  
 }
 
 .contacts__icon{
@@ -35,9 +37,11 @@
 
   @include small{
     width: 500px;
-    justify-content: flex-start;
+    
+   
   }
 
+  // position: relative;
 
   
 }
@@ -113,3 +117,4 @@
   margin-left: 12px;
   display: inline-block;
 }
+

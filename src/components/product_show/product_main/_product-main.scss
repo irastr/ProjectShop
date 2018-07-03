@@ -29,6 +29,7 @@
         flex-direction: column;
         width: 540px;
         align-items: center;
+        margin: 0;
  
     }
 
@@ -66,8 +67,8 @@
 
 .product-show__descr {
     line-height: 30px;
-    font-weight: 400;
-    @include rem(16);
+    // font-weight: 400;
+    // @include rem(16);
     margin-top: 0;
     margin-bottom: 40px;
 
@@ -78,6 +79,7 @@
 
     @include small {
         text-align: center;
+        // padding-right: 10px;
    }
 }
 
