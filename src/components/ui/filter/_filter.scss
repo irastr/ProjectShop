@@ -1,0 +1,44 @@
+.filter-wrap{
+    display: flex;
+    flex-direction: column;
+    background-color: $grey;
+}
+
+.filter-title{
+    @include rem(18);
+    color: $orange;
+    font-weight: 900;
+    margin-top: 41px;
+    margin-right: 170px;
+    margin-left: 40px;
+}
+
+.filter-list{
+    display: flex;
+    flex-direction: column;
+    @include reset-list;
+    
+}
+
+.filter-list__item{
+    margin-top: 40px;
+    
+}
+
+.filter-list__selection{
+    @include rem(16);
+    display: block;
+    text-decoration: none;
+    color: $deepblue;
+    
+    &:hover{
+        color: $orange;
+    }
+}
+
+
+.filter--container{
+    margin-top: 31px;
+    color: #ffffff;
+}
+
