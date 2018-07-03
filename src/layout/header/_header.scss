@@ -5,6 +5,7 @@
     margin-top: 60px;
     margin-bottom: 0;
     padding-bottom: 0;
+   
 }
 
 .logo-link {
@@ -12,7 +13,7 @@
 }
 
 .logo-wrap {
-    margin-top: 25px;
+    margin-top: 25px ;
     margin-right: 83px;
     
     @include small{
@@ -20,8 +21,14 @@
     }
 }
 
+
+
+
 .navbar-wrap {
     display: flex;
+    width: 100%;
+  
+
 }
 
 .navbar {
@@ -29,20 +36,59 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include small {
+        flex-direction: column;
+        text-align: center;
+        
+    
+    }
+
+    
     
 }
+
+
+
+.header-wrap {
+  
+    width: 100%;
+   
+   
+}
+
+
 
 .nav-list {
     @include reset-list;
     display: flex;
     text-decoration: none;
     margin: 40px 0 40px 0;
+    
+    
+
+    @include small {
+        flex-direction: column;
+        margin: 20px 0 10px 0;
+        
+    }
+
+    
+    
 }
 
 .nav__item {
     &:not(:first-child) {
         margin-left: 45px;
     }
+
+    @include small {
+        &:not(:first-child) {
+            margin-left: 0px;
+        }
+    }
+
+    
 }
 
 .ui-list {
@@ -50,10 +96,26 @@
     display: flex;
     padding: 0;
     margin: 0;
+
+    @include small {
+        padding-bottom: 20px;
+        padding-top: 20px;
+        }
+
+
 }
 
 .header {
     @include container;
+
+    @include small{
+      
+       
+        width: 100%;
+        position: relative;
+   
+    }
+
 }
 
 .nav__link {
@@ -64,6 +126,11 @@
     &:hover {
         color: $orange;
     }
+
+    @include small {
+        padding-bottom: 20px;
+       
+    }
 }
 
 .ui-list_item {
@@ -71,6 +138,8 @@
     &:not(:first-child) {
         margin-left: 29px;
     }
+
+    
 }
 
 
@@ -80,3 +149,23 @@
         color: $orange;
     }
 }
+
+.nav__icon {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  .nav-burger__checkbox {
+    display: none;
+      @include small {
+        
+    
+        &:checked {
+        ~ .nav-list  {
+            display: none;
+            
+        }
+        }
+    }
+  }

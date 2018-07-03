@@ -4,8 +4,16 @@
             <div class="logo-wrap">
                 <a href="index.html" class="logo_link"><img src="img/Logo_.png" alt="" class="logo_img"></a>
             </div>
+            <!-- <div class="nav__icon"><i class="fas fa-bars"></i></div> -->
             <nav class="navbar">
                 <!-- Navigation-->
+                <!-- <a href="#" class="nav__link">
+                        <div class="nav__icon"><i class="fas fa-bars"></i></div>
+                </a> -->
+
+                <input class="nav-burger__checkbox"type="checkbox" name="" id="burger">
+                <label class="nav-burger nav__icon" for="burger"> <i class="fas fa-bars"></i></label>
+                
                 <ul class="nav-list">
                     <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
                     <li class="nav__item"><a href="products.html" class="nav__link">Products</a></li>
@@ -23,3 +31,9 @@
         </div>
     </header>
 </div>
+
+<script >
+    $('.nav__link').click(function () {
+        $('.navbar').toggle();
+    });
+</script>
