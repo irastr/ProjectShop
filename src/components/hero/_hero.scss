@@ -22,7 +22,9 @@
     height: 650px;
     position: relative;
     
-    
+    @include medium{
+        display: none;
+    }
 }
 
 
